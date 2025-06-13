@@ -25,45 +25,48 @@
     <section>
       <h2>Enhancing Tumor Segmentation using Synthetic Data</h2>
       <p>
-        I am currently working as a research intern at the Laboratory for Machine Learning, Health, and Biomedicine at the University of Southern California. The goal of the project is to make tumor segmentation in medical images faster and more reliable. Annotating medical images manually takes up a lot of time for doctors, so we are building models to automate this task.
+        I am currently working as a research intern at the Laboratory for Machine Learning, Health, and Biomedicine at the University of Southern California. The project focuses on improving and automating the challenging task of tumor segmentation in breast and lung cancer.
       </p>
       <p>
-        A common problem in this area is that models trained on one dataset often fail when tested on another due to domain shifts. To solve this, we are generating synthetic data to train the model so it learns to generalize across different datasets. We are applying this to breast and lung cancer scans to build a model that can work reliably in real clinical settings.
+        Manual annotation of medical images is time-consuming and requires significant effort from clinicians. Our goal is to reduce this burden by developing a segmentation model that is both accurate and generalizable. A major challenge is the domain shift that occurs when models trained on one dataset are applied to another.
+      </p>
+      <p>
+        We address this by generating synthetic data to simulate a variety of domain scenarios. This helps the model learn more robust representations. The ultimate aim is to build a segmentation pipeline that can handle diverse real-world inputs and improve productivity in clinical workflows.
       </p>
     </section>
 
     <section>
       <h2>DES: Dynamic Expert Saturation (Continual Learning)</h2>
       <p>
-        This project was done at IIT Hyderabad as part of my research in continual learning, which is a way to train machine learning models gradually over time without forgetting past knowledge. Most existing methods assume that the data is balanced and that old samples are available — which is not realistic in practice.
+        This project was conducted at IIT Hyderabad as part of my research in Continual Learning, a paradigm where the goal is to train models on tasks that arrive over time—like how humans learn—without forgetting past knowledge.
       </p>
       <p>
-        We proposed a new learning setup called AFCIL (Assumption-Free Class-Incremental Learning) that removes these assumptions. Our method does not require access to stored data and works even when the data is imbalanced. It also works with modern pre-trained models like CLIP.
+        Most existing methods rely on unrealistic assumptions like having access to balanced data or stored old samples, which is rarely possible in practical settings. We proposed a new learning setup called AFCIL (Assumption-Free Class-Incremental Learning) that removes these assumptions. It does not require stored data, handles imbalanced tasks, and supports pre-trained models like CLIP.
       </p>
       <p>
-        We introduced a two-stage training method called Dynamic Expert Saturation. In the first stage, the model learns the common classes. In the second stage, it gradually adapts to rare classes by adjusting the expert components. This setup naturally handles class imbalance and avoids forgetting.
+        We introduced a two-stage training strategy called Dynamic Expert Saturation. In the first stage, the model is trained on head (frequent) classes. In the second stage, it incrementally saturates the model to tail (rare) classes using dynamically added lightweight expert adapters. This naturally handles class imbalance and avoids catastrophic forgetting.
       </p>
       <p>
-        We used PyTorch and CLIP, with lightweight MLP adapters. Our method achieved state-of-the-art results on CIFAR100-LT and ImageNet-LT, beating previous methods like DualPrompt, CODA, and MoE-Adapter by up to 6% in accuracy.
+        The model was implemented using PyTorch with a CLIP backbone and lightweight MLP adapters. We achieved state-of-the-art performance on CIFAR100-LT and ImageNet-LT, outperforming prior methods such as DualPrompt, CODA, and MoE-Adapter by up to 6% in top-1 accuracy.
       </p>
       <p>
-        <a href="Divya_Poster Final.pdf" target="_blank">Download Poster</a>
+        <a href="Divya_Poster Final.pdf" target="_blank">Poster for this Project</a>
       </p>
     </section>
 
     <section>
-      <h2>Making Vision Transformers More Human-Like</h2>
+      <h2>Making Vision Transformers More Human-Like: Exploring Compositionality</h2>
       <p>
-        This was a research project at IIT Hyderabad, submitted to NeurIPS 2025. We wanted to understand how Vision Transformers (ViTs) see and process images, and whether their behavior could be made more interpretable — similar to how humans recognize images from parts.
+        This research project was conducted at the Lab for Vision and Image Analysis, IIT Hyderabad, and has been submitted to NeurIPS 2025. We investigated how Vision Transformers (ViTs) understand complex visual inputs by studying their ability to combine parts into whole representations.
       </p>
       <p>
-        We built a framework using wavelet transforms to break down images into smaller meaningful parts. We then checked whether ViTs could put these parts back together using simple linear combinations. We trained models in PyTorch and ran large experiments on the ImageNet dataset.
+        We designed a framework using wavelet transforms to decompose images into frequency-based primitives. We then tested whether ViTs could reconstruct meaningful representations by linearly combining these parts. The models were built and trained in PyTorch and evaluated on the ImageNet dataset.
       </p>
       <p>
-        We found that ViTs do show compositional behavior in deeper layers, and that linear combinations of these parts closely match the original representations. Our results held even when we added noise or compressed the images, suggesting that the behavior is robust.
+        Our experiments demonstrated that ViTs—despite being highly nonlinear—exhibit compositional behavior in deeper layers. We also found that this structure persists under real-world distortions such as additive noise and JPEG compression, suggesting that these properties are both meaningful and robust.
       </p>
       <p>
-        <a href="Down_the_Rabbit_Hole_of_Vision_Transformers.pdf" target="_blank">Download Paper</a>
+        <a href="Down_the_Rabbit_Hole_of_Vision_Transformers.pdf" target="_blank">Paper Submission for this Project</a>
       </p>
     </section>
 
