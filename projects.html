@@ -43,9 +43,21 @@
       <p>
         Most existing methods rely on unrealistic assumptions like having access to balanced data or stored old samples, which is rarely possible in practical settings. We proposed a new learning setup called AFCIL (Assumption-Free Class-Incremental Learning) that removes these assumptions. It does not require stored data, handles imbalanced tasks, and supports pre-trained models like CLIP.
       </p>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="CL1.jpeg" alt="CL1" style="width: 240px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);" />
+        <p style="font-size: 0.9em; color: #555;">Figure 1: Our Problem Setting</p>
+      </div>
+
       <p>
         We introduced a two-stage training strategy called Dynamic Expert Saturation. In the first stage, the model is trained on head (frequent) classes. In the second stage, it incrementally saturates the model to tail (rare) classes using dynamically added lightweight expert adapters. This naturally handles class imbalance and avoids catastrophic forgetting.
       </p>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="CL2.jpeg" alt="CL2" style="width: 240px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);" />
+        <p style="font-size: 0.9em; color: #555;">Figure 2: Our Model Architecture and Trainnig Phases</p>
+      </div>
+
       <p>
         The model was implemented using PyTorch with a CLIP backbone and lightweight MLP adapters. We achieved state-of-the-art performance on CIFAR100-LT and ImageNet-LT, outperforming prior methods such as DualPrompt, CODA, and MoE-Adapter by up to 6% in top-1 accuracy.
       </p>
@@ -62,9 +74,21 @@
       <p>
         We designed a framework using wavelet transforms to decompose images into frequency-based primitives. We then tested whether ViTs could reconstruct meaningful representations by linearly combining these parts. The models were built and trained in PyTorch and evaluated on the ImageNet dataset.
       </p>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="ViT1.jpeg" alt="ViT1" style="width: 240px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);" />
+        <p style="font-size: 0.9em; color: #555;">Figure 3: Framework of out Wavelet-based image decomposition and re-composition</p>
+      </div>
+
       <p>
         Our experiments demonstrated that ViTs—despite being highly nonlinear—exhibit compositional behavior in deeper layers. We also found that this structure persists under real-world distortions such as additive noise and JPEG compression, suggesting that these properties are both meaningful and robust.
       </p>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="ViT2.jpeg" alt="ViT2" style="width: 240px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);" />
+        <p style="font-size: 0.9em; color: #555;">Figure 4: Reconstructing Images in Pixel Space using weghts learned on Representation Space</p>
+      </div>
+
       <p>
         <a href="Down_the_Rabbit_Hole_of_Vision_Transformers.pdf" target="_blank">Paper Submission for this Project</a>
       </p>
