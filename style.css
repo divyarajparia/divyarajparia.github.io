@@ -28,7 +28,7 @@ main {
 }
 
 
-/* Timeline-specific styles */
+/* Timeline Styles */
 .timeline-title {
   text-align: center;
   margin: 40px 0;
@@ -120,3 +120,4 @@ main {
     margin: 0;
   }
 }
+
