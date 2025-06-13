@@ -1,29 +1,151 @@
 <!-- timeline.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Timeline - Divya Rajparia</title><link rel="stylesheet" href="style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline - Divya Rajparia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #007acc;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .timeline-entry {
+      padding: 20px 30px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .timeline-entry.left {
+      left: 0;
+    }
+    .timeline-entry.right {
+      left: 50%;
+    }
+    .timeline-entry::before {
+      content: " ";
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 4px solid #007acc;
+      z-index: 1;
+    }
+    .timeline-entry.left::before {
+      right: -10px;
+    }
+    .timeline-entry.right::before {
+      left: -10px;
+    }
+    .timeline-entry .content {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .timeline-entry .date {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #007acc;
+    }
+    @media screen and (max-width: 768px) {
+      .timeline-entry {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-entry.right {
+        left: 0%;
+      }
+      .timeline::after {
+        left: 30px;
+      }
+      .timeline-entry::before {
+        left: 15px;
+      }
+    }
+  </style>
+</head>
 <body>
-    <nav>
+  <nav>
     <ul style="list-style: none; display: flex; gap: 20px; padding: 10px; background-color: #f2f2f2;">
       <li><a href="index.html">Home</a></li>
-      <!-- <li><a href="about.html">About</a></li> -->
       <li><a href="resume.html">Resume</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="timeline.html" class="active">Timeline</a></li>
       <li><a href="extracurriculars.html">Extracurriculars</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
   <main>
-    <h1>Timeline</h1>
-    <ul>
-      <li><strong>June 2025 – Present:</strong> Research Intern at USC on Tumor Segmentation</li>
-      <li><strong>Jan 2025 – May 2025:</strong> DES Project at IITH (Continual Learning)</li>
-      <li><strong>June 2024 – May 2025:</strong> Vision Transformers Project at IITH</li>
-      <li><strong>May 2023 – May 2024:</strong> Head, Music Club - Vibes, IIT Hyderabad</li>
-      <li><strong>May 2023 – Sept 2024:</strong> Ideation Head, E-Cell IIT Hyderabad</li>
-      <li><strong>Oct 2022 – Present:</strong> BTech at IIT Hyderabad</li>
-    </ul>
+    <h1 style="text-align:center; margin-top: 30px;">My Timeline</h1>
+    <div class="timeline">
+
+      <div class="timeline-entry left">
+        <div class="content">
+          <div class="date">June 2025 – Present</div>
+          <div class="desc">Research Intern at USC, working on enhancing tumor segmentation using AI and synthetic data.</div>
+        </div>
+      </div>
+
+      <div class="timeline-entry right">
+        <div class="content">
+          <div class="date">Jan 2025 – May 2025</div>
+          <div class="desc">Research Intern at the Lab for Machine Vision, IITH. Worked on AFCIL (Assumption-Free Class Incremental Learning).</div>
+        </div>
+      </div>
+
+      <div class="timeline-entry left">
+        <div class="content">
+          <div class="date">December 2024</div>
+          <div class="desc">Sakura Science Program at the University of Tokyo, Japan.</div>
+        </div>
+      </div>
+
+      <div class="timeline-entry right">
+        <div class="content">
+          <div class="date">June 2024 – May 2025</div>
+          <div class="desc">Research student at LFOVIA, IITH. Worked on explainability in Vision Transformers.</div>
+        </div>
+      </div>
+
+      <div class="timeline-entry left">
+        <div class="content">
+          <div class="date">June 2024 – December 2024</div>
+          <div class="desc">Research Intern at DRDO. Developed an autonomous robot with audio and vision capabilities.</div>
+        </div>
+      </div>
+
+      <div class="timeline-entry right">
+        <div class="content">
+          <div class="date">May 2022 – July 2024</div>
+          <div class="desc">Product Innovation Intern at Rewardz, Singapore.</div>
+        </div>
+      </div>
+
+      <div class="timeline-entry left">
+        <div class="content">
+          <div class="date">Oct 2022 – Present</div>
+          <div class="desc">Pursuing B.Tech in Engineering Science at IIT Hyderabad.</div>
+        </div>
+      </div>
+
+    </div>
   </main>
 </body>
 </html>
