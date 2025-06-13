@@ -1,88 +1,10 @@
-<!-- timeline.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Timeline - Divya Rajparia</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-  .timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto;
-  }
-  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #007acc;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .timeline-entry {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-  }
-  .timeline-entry.left {
-    left: 0;
-  }
-  .timeline-entry.right {
-    left: 50%;
-  }
-
-  .timeline-entry::before {
-    content: "";
-    position: absolute;
-    top: 24px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 4px solid #007acc;
-    z-index: 1;
-  }
-
-  .timeline-entry.left::before {
-    right: -12px;
-  }
-  .timeline-entry.right::before {
-    left: -12px;
-  }
-
-  .timeline-entry .content {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .timeline-entry .date {
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #007acc;
-  }
-
-  @media screen and (max-width: 768px) {
-    .timeline-entry {
-      width: 100%;
-      left: 0;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-    .timeline::after {
-      left: 30px;
-    }
-    .timeline-entry::before {
-      left: 15px;
-    }
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav>
@@ -90,65 +12,71 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="timeline.html" class="active">Timeline</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
       <li><a href="extracurriculars.html">Extracurriculars</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1 style="text-align:center; margin-top: 30px;">My Timeline</h1>
-    <div class="timeline">
-
-      <div class="timeline-entry left">
-        <div class="content">
-          <div class="date">June 2025 – Present</div>
-          <div class="desc">Research Intern at USC, working on enhancing tumor segmentation using AI and synthetic data.</div>
+    <h1 class="timeline-title">My Timeline</h1>
+    <div class="timeline-container">
+      <!-- Each timeline item -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content left">
+          <h3>June 2025 – Present</h3>
+          <p>Research Intern at USC, working on enhancing tumor segmentation using AI and synthetic data.</p>
         </div>
       </div>
 
-      <div class="timeline-entry right">
-        <div class="content">
-          <div class="date">Jan 2025 – May 2025</div>
-          <div class="desc">Research Intern at the Lab for Machine Vision, IITH. Worked on AFCIL (Assumption-Free Class Incremental Learning).</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content right">
+          <h3>Jan 2025 – May 2025</h3>
+          <p>Research Intern at the Lab for Machine Vision, IITH. Worked on AFCIL (Assumption-Free Class Incremental Learning).</p>
         </div>
       </div>
 
-      <div class="timeline-entry left">
-        <div class="content">
-          <div class="date">December 2024</div>
-          <div class="desc">Sakura Science Program at the University of Tokyo, Japan.</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content left">
+          <h3>December 2024</h3>
+          <p>Sakura Science Program at the University of Tokyo, Japan.</p>
         </div>
       </div>
 
-      <div class="timeline-entry right">
-        <div class="content">
-          <div class="date">June 2024 – May 2025</div>
-          <div class="desc">Research student at LFOVIA, IITH. Worked on explainability in Vision Transformers.</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content right">
+          <h3>June 2024 – May 2025</h3>
+          <p>Research Student at LFOVIA, IITH. Worked on Explainability in Vision Transformers.</p>
         </div>
       </div>
 
-      <div class="timeline-entry left">
-        <div class="content">
-          <div class="date">June 2024 – December 2024</div>
-          <div class="desc">Research Intern at DRDO. Developed an autonomous robot with audio and vision capabilities.</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content left">
+          <h3>June 2024 – December 2024</h3>
+          <p>Research Intern at DRDO. Developed an autonomous robot with audio and vision capabilities.</p>
         </div>
       </div>
 
-      <div class="timeline-entry right">
-        <div class="content">
-          <div class="date">May 2022 – July 2024</div>
-          <div class="desc">Product Innovation Intern at Rewardz, Singapore.</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content right">
+          <h3>May 2022 – July 2024</h3>
+          <p>Product Innovation Intern at Rewardz Singapore.</p>
         </div>
       </div>
 
-      <div class="timeline-entry left">
-        <div class="content">
-          <div class="date">Oct 2022 – Present</div>
-          <div class="desc">Pursuing B.Tech in Engineering Science at IIT Hyderabad.</div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content left">
+          <h3>Oct 2022 – Present</h3>
+          <p>BTech at IIT Hyderabad.</p>
         </div>
       </div>
-
     </div>
   </main>
 </body>
