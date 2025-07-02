@@ -1,27 +1,44 @@
 <!-- resume.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Resume - Divya Rajparia</title><link rel="stylesheet" href="style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Divya Rajparia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
   <nav>
-    <ul style="list-style: none; display: flex; gap: 20px; padding: 10px; background-color: #f2f2f2;">
+    <ul>
       <li><a href="index.html">Home</a></li>
-      <!-- <li><a href="about.html">About</a></li> -->
-      <li><a href="resume.html">Resume</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="timeline.html">Timeline</a></li>
       <li><a href="extracurriculars.html">Extracurriculars</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>Resume</h1>
-    <p><a href="Divya_CV_June_10.pdf" target="_blank">View my CV</a></p>
-    <p><strong>Education:</strong> BTech at IIT Hyderabad | GPA: 9.33</p>
-    <p><strong>Research:</strong> Tumor Segmentation at USC, Continual Learning at Lab for Machine Vision IITH, Compositionality in ViTs at LFOVIA IITH</p>
-    <p><strong>Skills:</strong> Python, PyTorch, TensorFlow, ML, C++, HTML/CSS, MATLAB</p>
-    <p><strong>Leadership:</strong> Head of Music Club, Ideation Head at E-Cell</p>
+    <section class="hero-section">
+      <h1>Resume</h1>
+      <p class="subtitle">AI/ML Researcher & Computer Science Student</p>
+    </section>
+
+    <div class="content-card">
+      <h2>Download Resume</h2>
+      <p>Get my complete resume with detailed information about my research experience, projects, skills, and achievements in AI/ML and healthcare technology.</p>
+      <p><a href="Divya_CV_June_10.pdf" target="_blank">📄 Download CV (PDF)</a></p>
+    </div>
+
+    <div class="content-card">
+      <h2>Quick Overview</h2>
+      <p><strong>Education:</strong> BTech Computer Science at IIT Hyderabad | GPA: 9.33/10</p>
+      <p><strong>Current Research:</strong> Tumor Segmentation at USC Viterbi, Continual Learning at IIT Hyderabad, Vision Transformer Explainability</p>
+      <p><strong>Technical Skills:</strong> Python, PyTorch, TensorFlow, Machine Learning, Computer Vision, C++, HTML/CSS, MATLAB, Medical Imaging</p>
+      <p><strong>Research Interests:</strong> AI in Healthcare, Medical Imaging, Continual Learning, Vision Transformers, Synthetic Data Generation</p>
+      <p><strong>Leadership:</strong> Head of Music Club, Ideation Head at E-Cell IIT Hyderabad</p>
+    </div>
   </main>
 </body>
 </html>
