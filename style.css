@@ -462,6 +462,49 @@ a:hover {
   text-align: left;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  box-shadow: var(--shadow-emerald);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.5);
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
@@ -488,6 +531,11 @@ a:hover {
   .content-card {
     padding: 24px;
     border-radius: 16px;
+  }
+
+  .content-card p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .profile-pic {
@@ -526,20 +574,110 @@ a:hover {
   .project-image {
     max-width: 100%;
   }
+
+  /* Reduce glassmorphism for performance */
+  body::after {
+    display: none;
+  }
+
+  .content-card,
+  nav,
+  .timeline-content {
+    backdrop-filter: blur(10px);
+  }
 }
 
 @media (max-width: 480px) {
+  /* Mobile hamburger menu */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  nav {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(12, 20, 33, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 0;
+    margin: 0;
+    padding: 20px;
+    gap: 0;
+    border: none;
+    border-bottom: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-heavy);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin: 5px 0;
+  }
+
+  main {
+    margin-top: 100px;
+    padding: 0 12px;
+  }
+
+  .hero-section {
+    padding: 30px 12px;
+  }
+
   .hero-section h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.1rem;
   }
 
   .content-card {
     padding: 20px;
   }
 
+  .content-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   .profile-pic {
     width: 120px;
     height: 120px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Further reduce effects for small screens */
+  body::before {
+    opacity: 0.5;
+  }
+
+  .content-card:hover {
+    transform: translateY(-4px);
   }
 }
 
