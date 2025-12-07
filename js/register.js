@@ -181,6 +181,12 @@ form.addEventListener('submit', async (e) => {
       name: 'ML Bootcamp',
       description: '1-Week Machine Learning Bootcamp',
       order_id: result.data.orderId,
+      method: {
+        upi: true,
+        card: true,
+        netbanking: true,
+        wallet: true
+      },
       handler: async function (response) {
         console.log('Payment successful:', response);
 
