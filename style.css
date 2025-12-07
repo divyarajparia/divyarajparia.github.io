@@ -795,6 +795,16 @@ a:hover {
   padding-right: 45px;
 }
 
+.form-group select option {
+  background-color: #1a1a2e;
+  color: #e2e8f0;
+  padding: 10px;
+}
+
+.form-group select option:hover {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
 /* Character Count */
 .char-count {
   display: block;
