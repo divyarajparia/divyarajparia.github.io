@@ -153,13 +153,13 @@ git push origin main
 ## 🔐 API KEYS & SECRETS
 
 **Already Configured:**
-- ✅ Razorpay Key ID: rzp_test_RoDFU5LmIo32we
-- ✅ Razorpay Secret: vi3EXflHtcZuc320OFQVWYfw
-- ✅ Resend API: re_FyYKtFwZ_HefX9MZsWzNuJi7mWaNMar1p
+- ✅ Razorpay Key ID: [Configured in Firebase]
+- ✅ Razorpay Secret: [Configured in Firebase]
+- ✅ Resend API: [Configured in Firebase]
 - ✅ Firebase Config: Updated in js/firebase-config.js
+- ✅ Razorpay Webhook Secret: [Configured in Firebase]
 
-**Still Need:**
-- ⏳ Razorpay Webhook Secret (create in Step 2)
+**IMPORTANT:** All API keys are stored securely in Firebase Functions config. Never commit API keys to Git!
 
 ---
 
