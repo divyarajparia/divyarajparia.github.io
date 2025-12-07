@@ -5,7 +5,10 @@
       "Bash(firebase functions:config:set:*)",
       "Bash(firebase deploy:*)",
       "Bash(firebase functions:log:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd ML Bootcamp registration system with Razorpay payment integration\n\n- Created bootcamp landing page with curriculum and pricing\n- Integrated Razorpay payment gateway (UPI, cards, wallets)\n- Set up Firebase Functions for backend payment processing\n- Added email notifications via Resend\n- Fully responsive design matching existing emerald theme\n- Configured Firestore security rules\n- Updated navigation on all pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
