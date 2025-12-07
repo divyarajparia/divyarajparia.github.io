@@ -185,7 +185,9 @@ form.addEventListener('submit', async (e) => {
         upi: true,
         card: true,
         netbanking: true,
-        wallet: true
+        wallet: true,
+        paylater: false,
+        cardless_emi: false
       },
       handler: async function (response) {
         console.log('Payment successful:', response);
