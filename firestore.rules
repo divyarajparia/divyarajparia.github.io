@@ -1,0 +1,18 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Registrations collection - only Cloud Functions can write
+    match /registrations/{registration} {
+      // Only authenticated users (admin) can read
+      allow read: if request.auth != null;
+      // Only Cloud Functions can write (no client writes allowed)
+      allow write: if false;
+    }
+
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

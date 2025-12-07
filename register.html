@@ -1,0 +1,158 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - ML Bootcamp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="extracurriculars.html">Extracurriculars</a></li>
+      <li><a href="bootcamp.html">ML Bootcamp</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h1>Register for ML Bootcamp</h1>
+      <p class="subtitle">Complete the form below to secure your spot</p>
+    </section>
+
+    <div class="form-container">
+      <form id="registration-form">
+        <!-- Personal Information -->
+        <div class="form-section">
+          <h3>Personal Information</h3>
+
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required />
+            <span class="error-message" id="fullName-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit number" required />
+            <span class="error-message" id="phone-error"></span>
+          </div>
+        </div>
+
+        <!-- Background -->
+        <div class="form-section">
+          <h3>Background</h3>
+
+          <div class="form-group">
+            <label for="schoolName">School/College Name *</label>
+            <input type="text" id="schoolName" name="schoolName" required />
+            <span class="error-message" id="schoolName-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="codingExperience">Coding Experience Level *</label>
+            <select id="codingExperience" name="codingExperience" required>
+              <option value="">Select your level</option>
+              <option value="beginner">Beginner (No experience)</option>
+              <option value="some">Some (Basic Python/JavaScript)</option>
+              <option value="intermediate">Intermediate (Built projects)</option>
+              <option value="advanced">Advanced (Regular coder)</option>
+            </select>
+            <span class="error-message" id="codingExperience-error"></span>
+          </div>
+        </div>
+
+        <!-- Motivation -->
+        <div class="form-section">
+          <h3>Your Goals</h3>
+
+          <div class="form-group">
+            <label for="motivation">Why do you want to join this bootcamp? * (Min 50 characters)</label>
+            <textarea id="motivation" name="motivation" rows="4" required></textarea>
+            <span class="char-count" id="motivation-count">0/50</span>
+            <span class="error-message" id="motivation-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="goals">What do you hope to achieve? * (Min 30 characters)</label>
+            <textarea id="goals" name="goals" rows="4" required></textarea>
+            <span class="char-count" id="goals-count">0/30</span>
+            <span class="error-message" id="goals-error"></span>
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="terms" name="terms" required />
+            I agree to the terms and conditions and understand the bootcamp schedule
+          </label>
+          <span class="error-message" id="terms-error"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span id="btn-text">Proceed to Payment - ₹1,500</span>
+          <span id="btn-loading" style="display: none;">Processing...</span>
+        </button>
+
+        <div class="payment-note">
+          <p>Secure payment via Razorpay (UPI, Cards, Wallets)</p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-functions-compat.js"></script>
+
+  <!-- Razorpay SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Your scripts -->
+  <script src="js/firebase-config.js"></script>
+  <script src="js/register.js"></script>
+
+  <!-- Mobile menu script -->
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-toggle')) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

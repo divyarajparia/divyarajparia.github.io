@@ -1,0 +1,140 @@
+<!-- bootcamp.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML Bootcamp - Divya Rajparia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="extracurriculars.html">Extracurriculars</a></li>
+      <li><a href="bootcamp.html" class="active">ML Bootcamp</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h1>Machine Learning Bootcamp</h1>
+      <p class="subtitle">Master AI/ML fundamentals in just 1 week | Live sessions with an IIT Hyderabad researcher</p>
+    </section>
+
+    <div class="content-card">
+      <h2>Why This Bootcamp?</h2>
+      <p>Learn Machine Learning from someone who's actively doing cutting-edge research at IIT Hyderabad and USC. This intensive 1-week bootcamp will take you from basics to building your own ML projects.</p>
+      <p>Whether you're a complete beginner or have some coding experience, this bootcamp is designed to give you hands-on practical knowledge that you can apply immediately.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>What You'll Learn</h2>
+      <h3>Week Overview</h3>
+      <p><strong>Day 1-2: Python & ML Foundations</strong></p>
+      <ul>
+        <li>Python programming essentials for ML</li>
+        <li>NumPy and Pandas for data manipulation</li>
+        <li>Introduction to Machine Learning concepts</li>
+        <li>Setting up your ML development environment</li>
+      </ul>
+
+      <p><strong>Day 3-4: Core ML Algorithms</strong></p>
+      <ul>
+        <li>Linear Regression and Classification</li>
+        <li>Decision Trees and Random Forests</li>
+        <li>Support Vector Machines</li>
+        <li>Model evaluation and validation</li>
+      </ul>
+
+      <p><strong>Day 5-6: Deep Learning Basics</strong></p>
+      <ul>
+        <li>Neural Networks fundamentals</li>
+        <li>Introduction to PyTorch/TensorFlow</li>
+        <li>Building your first neural network</li>
+        <li>Image classification with CNNs</li>
+      </ul>
+
+      <p><strong>Day 7: Real-World Project</strong></p>
+      <ul>
+        <li>Work on a complete ML project from scratch</li>
+        <li>Deploy your model</li>
+        <li>Best practices for ML development</li>
+        <li>Next steps in your ML journey</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h2>About Your Instructor</h2>
+      <p><strong>Divya Rajparia</strong> - AI/ML Researcher at IIT Hyderabad</p>
+      <p>I'm currently pursuing my BTech in Computer Science at IIT Hyderabad with a GPA of 9.33/10, specializing in Machine Learning and Computer Vision.</p>
+      <p>My research experience includes:</p>
+      <ul>
+        <li>Research Intern at USC's Lab for Machine Learning, Health, and Biomedicine</li>
+        <li>Published research on Vision Transformers (submitted to NeurIPS 2025)</li>
+        <li>Developed AFCIL framework for Continual Learning</li>
+        <li>Research internship at DRDO on autonomous robotics</li>
+      </ul>
+      <p>I'm passionate about making AI/ML accessible to everyone and helping students start their journey in this exciting field.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Bootcamp Details</h2>
+      <p><strong>Duration:</strong> 1 Week (7 days)</p>
+      <p><strong>Format:</strong> Live online sessions + Recorded lectures</p>
+      <p><strong>Time:</strong> 2 hours daily (flexible timings)</p>
+      <p><strong>Level:</strong> Beginner to Intermediate</p>
+      <p><strong>Prerequisites:</strong> Basic programming knowledge (any language)</p>
+      <p><strong>What You Get:</strong></p>
+      <ul>
+        <li>7 days of live interactive sessions</li>
+        <li>Access to all recorded lectures</li>
+        <li>Hands-on coding exercises and projects</li>
+        <li>Course materials and resources</li>
+        <li>Certificate of completion</li>
+        <li>Lifetime access to course content</li>
+        <li>Direct Q&A with the instructor</li>
+      </ul>
+    </div>
+
+    <div class="content-card cta-card">
+      <h2>Ready to Start Your ML Journey?</h2>
+      <p class="cta-price">Investment: ₹1,500 only</p>
+      <p>Limited spots available! Secure your seat now.</p>
+      <a href="register.html" class="cta-button">Register Now →</a>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-toggle')) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
