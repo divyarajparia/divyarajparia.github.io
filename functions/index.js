@@ -40,7 +40,7 @@ exports.createRazorpayOrder = functions.https.onCall(async (data, context) => {
 
     // Create Razorpay order
     const order = await razorpay.orders.create({
-      amount: 500, // ₹5 in paise
+      amount: 150000, // ₹1,500 in paise
       currency: 'INR',
       receipt: registrationRef.id,
       notes: {
@@ -94,7 +94,7 @@ exports.verifyRazorpayPayment = functions.https.onCall(async (data, context) => 
       paymentStatus: 'completed',
       razorpayPaymentId: razorpay_payment_id,
       razorpaySignature: razorpay_signature,
-      paidAmount: 500,
+      paidAmount: 150000,
       paidAt: admin.firestore.FieldValue.serverTimestamp()
     });
 
@@ -119,7 +119,7 @@ async function sendConfirmationEmail(registration) {
       html: `
         <h1>Welcome to the ML Bootcamp!</h1>
         <p>Hi ${registration.name},</p>
-        <p>Thank you for registering for the 1-week ML Bootcamp. Your payment of ₹5 has been confirmed.</p>
+        <p>Thank you for registering for the 1-week ML Bootcamp. Your payment of ₹1,500 has been confirmed.</p>
 
         <h2>Registration Details:</h2>
         <ul>
