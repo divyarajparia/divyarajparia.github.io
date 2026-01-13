@@ -1,6 +1,8 @@
 # API Keys and Secrets
 rzp-key.csv
+rzp-key live.csv
 resenf api key.csv
+js/config.js
 *.env
 *.env.local
 

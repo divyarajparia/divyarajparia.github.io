@@ -175,7 +175,7 @@ form.addEventListener('submit', async (e) => {
 
     // Configure Razorpay options
     const options = {
-      key: 'rzp_live_Rp4CKAKm98mZz5', // Your Razorpay Key ID (LIVE MODE)
+      key: window.RAZORPAY_KEY_ID, // Loaded from config.js
       amount: result.data.amount,
       currency: result.data.currency,
       name: 'ML Bootcamp',
