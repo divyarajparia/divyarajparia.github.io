@@ -1,0 +1,106 @@
+<!-- development.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Development Projects - Divya Rajparia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Projects</a>
+        <ul class="dropdown-menu">
+          <li><a href="development.html" class="active">Development</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="extracurriculars.html">Extracurriculars</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h1>Development Projects</h1>
+      <p class="subtitle">Building practical AI applications</p>
+    </section>
+
+    <div class="content-card">
+      <h2>Real-Time Object Detection & Tracking</h2>
+      <p>
+        A collection of computer vision applications built with YOLOv8 and SORT tracker, demonstrating real-world object detection and tracking across different scenarios. These projects showcase end-to-end implementation of deep learning models for practical use cases.
+      </p>
+      <p>
+        <strong>Technologies:</strong> YOLOv8, SORT (Kalman Filter + Hungarian Algorithm), Python, OpenCV
+      </p>
+
+      <div class="video-grid">
+        <div class="video-container">
+          <video controls>
+            <source src="Development/car-counter.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h3>Car Counter</h3>
+          <p>Real-time vehicle detection and counting in traffic footage using multi-object tracking to prevent double-counting</p>
+        </div>
+
+        <div class="video-container">
+          <video controls>
+            <source src="Development/people-counter.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h3>People Counter</h3>
+          <p>Bidirectional foot traffic tracking and counting with separate detection lines for entry and exit monitoring</p>
+        </div>
+
+        <div class="video-container">
+          <video controls>
+            <source src="Development/ppe-detection.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h3>PPE Detection</h3>
+          <p>Safety equipment detection system identifying helmets, vests, gloves, boots, and goggles for construction site compliance</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 2rem;">
+        <a href="https://github.com/divyarajparia/real-time-object-detection" target="_blank">🔗 View on GitHub</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-toggle')) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

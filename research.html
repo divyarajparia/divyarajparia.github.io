@@ -1,0 +1,134 @@
+<!-- research.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Projects - Divya Rajparia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Projects</a>
+        <ul class="dropdown-menu">
+          <li><a href="development.html">Development</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
+        </ul>
+      </li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="extracurriculars.html">Extracurriculars</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h1>Research Projects</h1>
+      <p class="subtitle">Exploring the frontiers of AI and Technology</p>
+    </section>
+
+    <div class="content-card">
+      <h2>DES: A Smarter Way to Grow Machine Learning Models Over Time</h2>
+      <h3>Continual Learning Research</h3>
+      <p>
+        This project was conducted at IIT Hyderabad's Machine Learning and Vision Lab, under the guidance of Dr. Vineeth N. Balasubramanian. It was a part of my research in Continual Learning, a paradigm where the goal is to train models on tasks that arrive over time—like how humans learn—without forgetting past knowledge.
+      </p>
+      <p>
+        Most existing methods rely on unrealistic assumptions like having access to balanced data or stored old samples, which is rarely possible in practical settings. We proposed a new learning setup called <strong>AFCIL (Assumption-Free Class-Incremental Learning)</strong> that removes these assumptions. It does not require stored data, handles imbalanced tasks, and supports pre-trained models like CLIP.
+      </p>
+
+      <img src="CL1.jpg" alt="Problem Setting Diagram" class="project-image" />
+      <p class="image-caption">Figure 1: Our Problem Setting - AFCIL Framework</p>
+
+      <p>
+        We introduced a two-stage training strategy called <strong>Dynamic Expert Saturation</strong>. In the first stage, the model is trained on head (frequent) classes. In the second stage, it incrementally saturates the model to tail (rare) classes using dynamically added lightweight expert adapters. This naturally handles class imbalance and avoids catastrophic forgetting.
+      </p>
+
+      <img src="CL2.jpg" alt="Model Architecture" class="project-image" />
+      <p class="image-caption">Figure 2: Our Model Architecture and Training Phases</p>
+
+      <p>
+        The model was implemented using <strong>PyTorch</strong> with a CLIP backbone and lightweight MLP adapters. We achieved state-of-the-art performance on CIFAR100-LT and ImageNet-LT, outperforming prior methods such as DualPrompt, CODA, and MoE-Adapter by up to <strong>6% in top-1 accuracy</strong>.
+      </p>
+      <p>
+        <a href="AFCIL_Poster.pdf" target="_blank">📄 View Project Poster</a>
+        <br>
+        <a href="AFCIL_Preprint.pdf" target="_blank">Link to preprint</a>
+      </p>
+    </div>
+
+
+
+
+    <div class="content-card">
+      <h2>Enhancing Tumor Segmentation using Synthetic Data</h2>
+      <p>
+        I am currently working as a research intern at the Laboratory for Machine Learning, Health, and Biomedicine at the University of Southern California. The project focuses on improving and automating the challenging task of tumor segmentation in breast and lung cancer.
+      </p>
+      <p>
+        Manual annotation of medical images is time-consuming and requires significant effort from clinicians. Our goal is to reduce this burden by developing a segmentation model that is both accurate and generalizable. A major challenge is the domain shift that occurs when models trained on one dataset are applied to another.
+      </p>
+      <p>
+        We address this by generating synthetic data to simulate a variety of domain scenarios. This helps the model learn more robust representations. The ultimate aim is to build a segmentation pipeline that can handle diverse real-world inputs and improve productivity in clinical workflows.
+      </p>
+    </div>
+
+    <div class="content-card">
+      <h2>Making Vision Transformers More Human-Like</h2>
+      <h3>Explainability in Vision Transformers</h3>
+      <p>
+        This research project was conducted at the Lab for Vision and Image Analysis, IIT Hyderabad, under the guidance of Dr. Sumohana S. Channappayya, and has been submitted to <strong>NeurIPS 2025</strong>. We investigated how Vision Transformers (ViTs) understand complex visual inputs by studying their ability to combine parts into whole representations.
+      </p>
+      <p>
+        We designed a framework using <strong>wavelet transforms</strong> to decompose images into frequency-based primitives. We then tested whether ViTs could reconstruct meaningful representations by linearly combining these parts. The models were built and trained in PyTorch and evaluated on the ImageNet dataset.
+      </p>
+
+      <img src="ViT1.png" alt="Wavelet Framework" class="project-image" />
+      <p class="image-caption">Figure 3: Framework of our wavelet-based image decomposition and re-composition</p>
+
+      <p>
+        Our experiments demonstrated that ViTs—despite being highly nonlinear—exhibit <strong>compositional behavior in deeper layers</strong>. We also found that this structure persists under real-world distortions such as additive noise and JPEG compression, suggesting that these properties are both meaningful and robust.
+      </p>
+
+      <img src="ViT2.png" alt="Reconstruction Results" class="project-image" />
+      <p class="image-caption">Figure 4: Reconstructing images in pixel space using weights learned on representation space</p>
+
+      <p>
+        <a href="Down_the_Rabbit_Hole_of_Vision_Transformers.pdf" target="_blank">📄 Read Full Paper Submission</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-toggle')) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

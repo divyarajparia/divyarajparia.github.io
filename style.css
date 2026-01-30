@@ -153,6 +153,52 @@ nav ul li a.active {
   box-shadow: var(--shadow-emerald);
 }
 
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(12, 20, 33, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 8px;
+  margin-top: 8px;
+  min-width: 160px;
+  box-shadow: var(--shadow-heavy);
+  z-index: 1001;
+  flex-direction: column;
+  gap: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  width: 100%;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
+  background: var(--gradient-primary);
+  color: white;
+}
+
 /* Main Content Area */
 main {
   max-width: 1200px;
@@ -338,6 +384,64 @@ h3 {
   color: var(--text-muted);
   margin-top: 10px;
   font-style: italic;
+}
+
+/* Video Grid for Development Projects */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-heavy);
+  transition: all 0.4s ease;
+  background: #000;
+}
+
+.video-container video:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-heavy), var(--shadow-emerald);
+}
+
+.video-container h3 {
+  font-size: 1.2rem;
+  color: var(--primary-emerald);
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.video-container p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Video Grid */
+@media (max-width: 1024px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .video-container h3 {
+    font-size: 1.4rem;
+  }
+
+  .video-container p {
+    font-size: 1rem;
+  }
 }
 
 /* Links */
@@ -631,6 +735,26 @@ a:hover {
     font-size: 16px;
     border-radius: 12px;
     margin: 5px 0;
+  }
+
+  /* Mobile dropdown */
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    display: none;
+    background: rgba(16, 185, 129, 0.1);
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-menu li a {
+    padding: 12px 20px;
+    font-size: 15px;
   }
 
   main {
