@@ -25,6 +25,10 @@ npm-debug.log
 *.swp
 *.swo
 
+# Claude
+.claude/
+tmpclaude-*/
+
 # OS
 .DS_Store
 Thumbs.db
