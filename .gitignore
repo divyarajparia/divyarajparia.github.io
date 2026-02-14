@@ -33,6 +33,9 @@ tmpclaude-*/
 .DS_Store
 Thumbs.db
 
+# Resume source files
+resume/
+
 # Misc
 rouch.txt
 SESSION-SUMMARY.md
