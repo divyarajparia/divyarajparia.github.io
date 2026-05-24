@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ViT Explainability — Divya Rajparia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+  <a class="back-link" href="../index.html">← Back</a>
+
+  <div class="proj-page-label">Project</div>
+  <h1 class="proj-page-title">Down the Rabbit Hole of Vision Transformers</h1>
+
+  <div class="proj-section-title">Overview</div>
+  <p class="proj-overview">
+    Research conducted at LFOVIA, IIT Hyderabad, submitted to <strong>NeurIPS 2025</strong>. We investigated how Vision
+    Transformers (ViTs) understand complex visual inputs by studying their ability to combine parts into whole
+    representations — a property called compositionality. Using wavelet transforms, we decomposed images into
+    frequency-based primitives and tested whether ViTs could reconstruct meaningful representations by linearly
+    combining these parts in their feature space. Despite ViTs being highly nonlinear, we found that they exhibit
+    clear compositional behavior in their deeper layers, and that this structure persists under real-world
+    distortions like additive noise and JPEG compression.
+  </p>
+
+  <div class="proj-section-title">Key Features</div>
+  <ul class="proj-features">
+    <li>Wavelet-based image decomposition into interpretable frequency primitives</li>
+    <li>Linear reconstruction test in ViT representation space to probe compositionality</li>
+    <li>Compositional behavior confirmed in deeper transformer layers across multiple ViT architectures</li>
+    <li>Robust to real-world distortions: additive noise and JPEG compression</li>
+    <li>Evaluated on ImageNet with reconstruction in both representation and pixel space</li>
+    <li>Submitted to NeurIPS 2025</li>
+  </ul>
+
+  <div class="proj-section-title">Technologies</div>
+  <div class="proj-tech-tags">
+    <span class="proj-tech-tag">Python</span>
+    <span class="proj-tech-tag">PyTorch</span>
+    <span class="proj-tech-tag">Vision Transformers</span>
+    <span class="proj-tech-tag">Wavelet Transforms</span>
+    <span class="proj-tech-tag">Explainability</span>
+    <span class="proj-tech-tag">ImageNet</span>
+    <span class="proj-tech-tag">Linear Probing</span>
+  </div>
+
+  <div class="proj-links-row">
+    <a class="proj-link-btn primary" href="../Down_the_Rabbit_Hole_of_Vision_Transformers.pdf" target="_blank">Read Paper</a>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFCIL — Divya Rajparia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+  <a class="back-link" href="../index.html">← Back</a>
+
+  <div class="proj-page-label">Project</div>
+  <h1 class="proj-page-title">AFCIL — Dynamic Expert Saturation</h1>
+
+  <div class="proj-section-title">Overview</div>
+  <p class="proj-overview">
+    A new continual learning setup called <strong>AFCIL (Assumption-Free Class-Incremental Learning)</strong> that removes the
+    unrealistic assumptions most existing methods rely on — no balanced data, no stored old samples, and full support for
+    pre-trained models like CLIP. We introduced a two-stage training strategy called <strong>Dynamic Expert Saturation (DES)</strong>:
+    the model first trains on head (frequent) classes, then incrementally saturates to tail (rare) classes using dynamically
+    added lightweight MLP expert adapters. This naturally handles class imbalance and prevents catastrophic forgetting without
+    replay buffers.
+  </p>
+
+  <div class="proj-section-title">Key Features</div>
+  <ul class="proj-features">
+    <li>No stored data or replay buffers — works under strict privacy and memory constraints</li>
+    <li>Handles long-tailed class distributions natively via two-stage expert saturation</li>
+    <li>Plug-and-play with pre-trained vision-language backbones (CLIP)</li>
+    <li>State-of-the-art on CIFAR-100-LT and ImageNet-LT, outperforming DualPrompt, CODA, and MoE-Adapter by up to 6% top-1 accuracy</li>
+    <li>Lightweight MLP adapters keep compute overhead minimal</li>
+  </ul>
+
+  <div class="proj-section-title">Technologies</div>
+  <div class="proj-tech-tags">
+    <span class="proj-tech-tag">Python</span>
+    <span class="proj-tech-tag">PyTorch</span>
+    <span class="proj-tech-tag">CLIP</span>
+    <span class="proj-tech-tag">Continual Learning</span>
+    <span class="proj-tech-tag">Class-Incremental Learning</span>
+    <span class="proj-tech-tag">MLP Adapters</span>
+    <span class="proj-tech-tag">CIFAR-100-LT</span>
+    <span class="proj-tech-tag">ImageNet-LT</span>
+  </div>
+
+  <div class="proj-links-row">
+    <a class="proj-link-btn primary" href="../AFCIL_Poster.pdf" target="_blank">View Poster</a>
+    <a class="proj-link-btn" href="../AFCIL_Preprint.pdf" target="_blank">Read Preprint</a>
+  </div>
+
+</div>
+
+</body>
+</html>
