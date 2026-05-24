@@ -1,86 +1,235 @@
-<!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divya Rajparia | AI/ML Researcher</title>
+  <title>Divya Rajparia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="mobile-menu-toggle" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
 
   <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <!-- <li class="dropdown">
-        <a href="#">Projects</a>
-        <ul class="dropdown-menu">
-          <li><a href="development.html">Development</a></li>
-          <li><a href="research.html">Research</a></li>
-        </ul>
-      </li> -->
-      <li><a href="research.html">Projects</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
-      <li><a href="extracurriculars.html">Extracurriculars</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Divya Rajparia</a>
+      <div class="nav-links">
+        <a href="mailto:dmrajparia@gmail.com">Email</a>
+        <a href="https://github.com/divyarajparia" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/divya-rajparia-237786205" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="resume/main.pdf" target="_blank">Resume</a>
+      </div>
+    </div>
   </nav>
 
   <main>
-    <section class="hero-section">
-      <h1>Divya Rajparia</h1>
-      <p class="subtitle">AI Researcher @ University of Southern California | CS @ IIT Hyderabad</p>
-      
-      <div class="profile-container">
-        <img src="divya.jpeg" alt="Divya Rajparia" class="profile-pic" />
+
+    <!-- ── HERO ────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>Divya Rajparia</h1>
+          <p class="hero-role">AI / ML Researcher</p>
+          <p class="hero-location">@ USC Viterbi · IIT Hyderabad</p>
+          <p class="hero-bio">
+            US citizen and CS grad from IIT Hyderabad with a focus on Machine Learning,
+            Computer Vision, and AI for Healthcare. Currently researching tumor segmentation
+            using synthetic data at USC's Lab for Machine Learning, Health, and Biomedicine.
+            I care about building AI that is robust, interpretable, and actually useful.
+          </p>
+        </div>
+        <div class="hero-photo">
+          <img src="divya.jpeg" alt="Divya Rajparia" />
+        </div>
       </div>
     </section>
 
-    <div class="content-card">
-      <p>
-        Hello! I'm <strong>Divya Rajparia</strong>, a passionate Computer Science student at IIT Hyderabad with a deep fascination for Machine Learning, Computer Vision, and AI applications in Healthcare. I believe technology has the power to transform lives and solve real-world challenges.
-      </p>
-      <p>
-        Currently, I'm working as a research intern at USC's Laboratory for Machine Learning, Health, and Biomedicine, focusing on enhancing tumor segmentation using synthetic data. My research journey spans from continual learning and explainable AI to developing innovative AI solutions for medical applications.
-      </p>
-      <p>
-        I am deeply driven by cool innovations in technology and aspire to develop meaningful solutions that tackle complex challenges. Explore this website to learn more about my academic journey, research projects, and experiences!
-      </p>
-    </div>
+    <!-- ── PROJECTS ─────────────────────────────────────── -->
+    <section id="projects">
+      <div class="section-label">Projects</div>
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-title">AFCIL — Assumption-Free Class-Incremental Learning</div>
+          <div class="card-subtitle">Continual Learning · IIT Hyderabad ML Lab</div>
+          <p class="card-desc">
+            Proposed a new continual learning setup that removes unrealistic assumptions (balanced data, stored samples).
+            Introduced Dynamic Expert Saturation (DES) — a two-stage training strategy with lightweight MLP adapters on a
+            CLIP backbone that handles class imbalance without catastrophic forgetting. Achieved up to 6% improvement over
+            prior methods on CIFAR-100-LT and ImageNet-LT.
+          </p>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">CLIP</span>
+              <span class="tag">Continual Learning</span>
+              <span class="tag">Class Imbalance</span>
+            </div>
+            <div class="card-links">
+              <a href="AFCIL_Poster.pdf" target="_blank">Poster</a>
+              <a href="AFCIL_Preprint.pdf" target="_blank">Preprint</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Enhancing Tumor Segmentation with Synthetic Data</div>
+          <div class="card-subtitle">Medical Imaging · USC Viterbi (ongoing)</div>
+          <p class="card-desc">
+            Building a segmentation pipeline for breast and lung cancer that addresses domain shift
+            across clinical datasets. Generating synthetic data to simulate diverse imaging conditions,
+            with the goal of reducing annotation burden and improving model generalizability in real-world
+            clinical workflows.
+          </p>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Synthetic Data</span>
+              <span class="tag">Medical Imaging</span>
+              <span class="tag">Segmentation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Down the Rabbit Hole of Vision Transformers</div>
+          <div class="card-subtitle">Explainability · LFOVIA, IIT Hyderabad · NeurIPS 2025 submission</div>
+          <p class="card-desc">
+            Investigated whether Vision Transformers exhibit compositional behavior by decomposing images
+            into wavelet-based frequency primitives and testing linear reconstruction in representation space.
+            Found that ViTs develop compositional structure in deeper layers that persists under noise and
+            JPEG compression — suggesting it is meaningful and robust.
+          </p>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">ViT</span>
+              <span class="tag">Wavelet Transforms</span>
+              <span class="tag">Explainability</span>
+            </div>
+            <div class="card-links">
+              <a href="Down_the_Rabbit_Hole_of_Vision_Transformers.pdf" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SKILLS ───────────────────────────────────────── -->
+    <section id="skills">
+      <div class="section-label">Skills</div>
+      <div class="skills-grid">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">Computer Vision</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Continual Learning</span>
+        <span class="skill-tag">Medical Imaging</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">MATLAB</span>
+        <span class="skill-tag">HTML / CSS</span>
+        <span class="skill-tag">Firebase</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ────────────────────────────────────── -->
+    <section id="experience">
+      <div class="section-label">Experience</div>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Research Intern</span>
+            <span class="exp-date">Jun 2025 – present</span>
+          </div>
+          <div class="exp-org">USC Viterbi — Lab for Machine Learning, Health, and Biomedicine</div>
+          <p class="exp-desc">Developing tumor segmentation pipeline using synthetic data generation to improve generalizability across breast and lung cancer datasets.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Research Intern — Continual Learning</span>
+            <span class="exp-date">Jan – May 2025</span>
+          </div>
+          <div class="exp-org">IIT Hyderabad — Machine Learning and Vision Lab (Dr. Vineeth N. Balasubramanian)</div>
+          <p class="exp-desc">Developed the AFCIL framework and Dynamic Expert Saturation method. State-of-the-art on CIFAR-100-LT and ImageNet-LT.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Research Student — Vision Transformer Explainability</span>
+            <span class="exp-date">Jun 2024 – May 2025</span>
+          </div>
+          <div class="exp-org">IIT Hyderabad — LFOVIA (Dr. Sumohana S. Channappayya)</div>
+          <p class="exp-desc">Investigated compositional behavior in ViTs using wavelet-based decomposition. Paper submitted to NeurIPS 2025.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Research Intern</span>
+            <span class="exp-date">Jun – Dec 2024</span>
+          </div>
+          <div class="exp-org">DRDO</div>
+          <p class="exp-desc">Built an autonomous robot with advanced audio and vision capabilities for defense applications.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Research Exchange — Sakura Science Program</span>
+            <span class="exp-date">Dec 2024</span>
+          </div>
+          <div class="exp-org">University of Tokyo (Hongo Campus), Japan</div>
+          <p class="exp-desc">International research exchange focused on advanced AI technologies.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Product Innovation Intern</span>
+            <span class="exp-date">May 2022 – Jul 2024</span>
+          </div>
+          <div class="exp-org">Rewardz — Singapore</div>
+          <p class="exp-desc">Built analytics dashboard for large-scale app usage data and user behavior analysis.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ─────────────────────────────────────── -->
+    <section id="education">
+      <div class="section-label">Education</div>
+      <div class="edu-item">
+        <div class="edu-degree">BTech — Computer Science &amp; Engineering</div>
+        <div class="edu-school">Indian Institute of Technology Hyderabad</div>
+        <div class="edu-meta">2022 – 2026 &nbsp;·&nbsp; GPA 9.39 / 10</div>
+      </div>
+    </section>
+
+    <!-- ── EXTRACURRICULARS ───────────────────────────────── -->
+    <section id="extras">
+      <div class="section-label">Beyond Academia</div>
+      <div class="extras-list">
+
+        <div class="extra-item">
+          <div class="extra-role">Head of Music Club</div>
+          <div class="extra-org">IIT Hyderabad</div>
+          <p class="extra-desc">Led a team of student musicians, organized concerts, jam sessions, and workshops to build an inclusive cultural space on campus.</p>
+          <a class="extra-link" href="https://www.youtube.com/@divyarajparia3296" target="_blank" rel="noopener">YouTube →</a>
+        </div>
+
+        <div class="extra-item">
+          <div class="extra-role">Ideation Head</div>
+          <div class="extra-org">E-Cell — IIT Hyderabad</div>
+          <p class="extra-desc">Ran idea-generation sessions, managed teams, and hosted startup pitch competitions to encourage entrepreneurial thinking across campus.</p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking a link
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-toggle')) {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      }
-    });
-  </script>
 </body>
 </html>
