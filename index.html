@@ -12,7 +12,7 @@
 <body>
 
 <!-- theme toggle — fixed top-right -->
-<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀ Light</button>
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☾ Dark</button>
 
 <div class="container">
   <div class="bento">
@@ -65,19 +65,7 @@
       <a class="cta-btn" href="mailto:dmrajparia@gmail.com">Email me →</a>
     </div>
 
-    <!-- ── PROJECT 1 (span 4, row 3) ─────────────────── -->
-    <a class="card c-proj" href="projects/afcil.html">
-      <span class="label">Project</span>
-      <div class="proj-title">AFCIL — Dynamic Expert Saturation</div>
-      <p class="proj-desc">Assumption-free class-incremental learning with no stored data. Up to +6.38% on CIFAR-100-LT and ImageNet-LT.</p>
-      <div class="tags">
-        <span class="tag">PyTorch</span>
-        <span class="tag">CLIP</span>
-        <span class="tag">Continual Learning</span>
-      </div>
-    </a>
-
-    <!-- ── PROJECT 2 (span 4, row 3) ─────────────────── -->
+    <!-- ── PROJECT 1 — USC (span 4, row 3) ──────────── -->
     <a class="card c-proj" href="projects/tumor-segmentation.html">
       <span class="label">Project</span>
       <div class="proj-title">Tumor Segmentation via Domain Adaptation</div>
@@ -86,6 +74,18 @@
         <span class="tag">PyTorch</span>
         <span class="tag">CycleGAN</span>
         <span class="tag">Medical Imaging</span>
+      </div>
+    </a>
+
+    <!-- ── PROJECT 2 (span 4, row 3) ─────────────────── -->
+    <a class="card c-proj" href="projects/extbrew.html">
+      <span class="label">Project</span>
+      <div class="proj-title">ExtBrew: AI-Native Chrome Extension Scaffolder</div>
+      <p class="proj-desc">Scaffolds Manifest V3 Chrome extensions from natural-language prompts via Claude Sonnet 4.6 with streaming tool-use.</p>
+      <div class="tags">
+        <span class="tag">Next.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Claude API</span>
       </div>
     </a>
 
@@ -114,26 +114,26 @@
     </div>
 
     <!-- ── PROJECT 3 (span 4, row 4) ─────────────────── -->
-    <a class="card c-proj" href="projects/vit-explainability.html">
+    <a class="card c-proj" href="projects/afcil.html">
       <span class="label">Project</span>
-      <div class="proj-title">Down the Rabbit Hole of ViTs</div>
-      <p class="proj-desc">Wavelet-based compositionality framework for Vision Transformers. Robust to noise and JPEG compression. NeurIPS 2025 submission.</p>
+      <div class="proj-title">DES: A Smarter Way to Grow ML Models Over Time</div>
+      <p class="proj-desc">Assumption-free class-incremental learning with no stored data. Up to +6.38% on CIFAR-100-LT and ImageNet-LT.</p>
       <div class="tags">
         <span class="tag">PyTorch</span>
-        <span class="tag">ViT</span>
-        <span class="tag">Wavelets</span>
+        <span class="tag">CLIP</span>
+        <span class="tag">Continual Learning</span>
       </div>
     </a>
 
     <!-- ── PROJECT 4 (span 4, row 4) ─────────────────── -->
-    <a class="card c-proj" href="projects/extbrew.html">
+    <a class="card c-proj" href="projects/vit-explainability.html">
       <span class="label">Project</span>
-      <div class="proj-title">ExtBrew — AI Chrome Extension Scaffolder</div>
-      <p class="proj-desc">Scaffolds Manifest V3 Chrome extensions from natural-language prompts via Claude Sonnet 4.6 with streaming tool-use.</p>
+      <div class="proj-title">Exploring Compositionality in Vision Transformers</div>
+      <p class="proj-desc">Wavelet-based compositionality framework for Vision Transformers. Robust to noise and JPEG compression.</p>
       <div class="tags">
-        <span class="tag">Next.js</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Claude API</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">ViT</span>
+        <span class="tag">Wavelets</span>
       </div>
     </a>
 
@@ -275,9 +275,14 @@
 <script>
 /* ── THEME TOGGLE ─────────────────────────────────────── */
 const themeBtn = document.getElementById('theme-toggle');
+const root = document.documentElement;
 
 function applyTheme(light) {
-  document.body.classList.toggle('light', light);
+  if (light) {
+    root.setAttribute('data-theme', 'light');
+  } else {
+    root.removeAttribute('data-theme');
+  }
   themeBtn.textContent = light ? '☾ Dark' : '☀ Light';
   document.querySelectorAll('.yt-poly').forEach(p => {
     p.setAttribute('fill', light ? '#ffffff' : '#141414');
@@ -285,12 +290,16 @@ function applyTheme(light) {
 }
 
 themeBtn.addEventListener('click', () => {
-  const goLight = !document.body.classList.contains('light');
+  const goLight = root.getAttribute('data-theme') !== 'light';
   localStorage.setItem('theme', goLight ? 'light' : 'dark');
   applyTheme(goLight);
 });
 
-if (localStorage.getItem('theme') === 'light') applyTheme(true);
+if (localStorage.getItem('theme') === 'dark') {
+  applyTheme(false);
+} else {
+  applyTheme(true);
+}
 
 /* ── INTERACTIVE TERMINAL ─────────────────────────────── */
 const termInput  = document.getElementById('terminal-input');

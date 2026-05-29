@@ -14,12 +14,12 @@
   --gap:          10px;
 }
 
-body.light {
-  --bg:           #f2f2f2;
+:root[data-theme="light"] {
+  --bg:           #f0f0f0;
   --card:         #ffffff;
-  --card-hover:   #f8f8f8;
-  --border:       rgba(0,0,0,0.08);
-  --border-hover: rgba(0,0,0,0.16);
+  --card-hover:   #f7f7f7;
+  --border:       rgba(0,0,0,0.09);
+  --border-hover: rgba(0,0,0,0.18);
   --text:         #111111;
   --muted:        #555555;
   --dim:          #aaaaaa;
@@ -128,7 +128,7 @@ body {
 /* ── GRID PLACEMENT ─────────────────────────────────── */
 /* Row 1–2 */
 .c-hero    { grid-column: span 8; grid-row: span 2; }
-.c-avatar  { grid-column: span 4; padding: 0; height: 200px; }
+.c-avatar  { grid-column: span 4; padding: 20px; display: flex; align-items: center; justify-content: center; }
 /* Row 2 right */
 .c-contact { grid-column: span 4; }
 /* Row 3–4 */
@@ -181,9 +181,8 @@ body {
 .c-avatar { cursor: default; }
 .c-avatar:hover { transform: none; }
 .avatar-img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center top;
-  border-radius: var(--radius); display: block;
+  width: 60%; height: auto;
+  border-radius: calc(var(--radius) - 4px); display: block;
 }
 
 /* ── CONTACT ────────────────────────────────────────── */
@@ -413,7 +412,7 @@ footer {
   .c-exp, .c-edu, .c-extras {
     grid-column: span 1; grid-row: span 1;
   }
-  .c-avatar { height: 240px; }
+  .c-avatar { padding: 24px; }
   .hero-name { font-size: 2rem; }
   .c-terminal { min-height: 200px; }
   .extras-grid { grid-template-columns: 1fr; }
