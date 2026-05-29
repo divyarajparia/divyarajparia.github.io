@@ -133,7 +133,7 @@ body {
 .c-contact { grid-column: span 4; }
 /* Row 3–4 */
 .c-proj    { grid-column: span 4; }
-.c-terminal{ grid-column: span 4; grid-row: span 2; padding: 0; }
+.c-terminal{ grid-column: span 4; grid-row: span 2; padding: 0; overflow: hidden; }
 /* Row 5 */
 .c-awards  { grid-column: span 4; }
 .c-skills  { grid-column: span 8; }
@@ -244,8 +244,7 @@ body {
 .terminal-scroll {
   overflow-y: auto; padding: 14px 16px;
   display: flex; flex-direction: column; gap: 1px;
-  /* height = card height - bar height */
-  min-height: 280px;
+  max-height: 340px;
   scrollbar-width: none;
 }
 .terminal-scroll::-webkit-scrollbar { display: none; }
