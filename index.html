@@ -11,13 +11,13 @@
 </head>
 <body>
 
-<!-- ── THEME TOGGLE ──────────────────────────────────── -->
-<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀</button>
+<!-- theme toggle — fixed top-right -->
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀ Light</button>
 
 <div class="container">
   <div class="bento">
 
-    <!-- ── HERO (9 cols) ──────────────────────────────── -->
+    <!-- ── HERO (span 8, row-span 2) ─────────────────── -->
     <div class="card c-hero">
       <span class="label">Home</span>
       <h1 class="hero-name">Divya Rajparia</h1>
@@ -25,8 +25,8 @@
       <p class="hero-loc">@ USC Viterbi &nbsp;·&nbsp; IIT Hyderabad &nbsp;·&nbsp; U.S. Citizen</p>
       <p class="hero-bio">
         I train models, chase benchmarks, and find it impossible to stop reading papers at 2 AM.
-        CS grad from IIT Hyderabad (top ~0.5% nationally, GPA 9.44). Currently working on
-        tumor segmentation at USC and building AI-native tools with LLMs.
+        CS grad from IIT Hyderabad (top ~0.5% nationally, GPA 9.44/10). Currently doing ML research
+        at USC and building AI-native tools with LLMs and agentic systems.
       </p>
       <div class="hero-links">
         <a class="hero-link" href="mailto:dmrajparia@gmail.com">
@@ -42,7 +42,7 @@
           LinkedIn
         </a>
         <a class="hero-link" href="https://www.youtube.com/@divyarajparia3296" target="_blank" rel="noopener">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#141414"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon class="yt-poly" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#141414"/></svg>
           YouTube
         </a>
         <a class="hero-link" href="Divya-Resume-May-28.pdf" target="_blank">
@@ -52,12 +52,12 @@
       </div>
     </div>
 
-    <!-- ── AVATAR (3 cols) ────────────────────────────── -->
+    <!-- ── AVATAR (span 4, row 1) ─────────────────────── -->
     <div class="card c-avatar">
       <img class="avatar-img" src="divya.jpeg" alt="Divya Rajparia" />
     </div>
 
-    <!-- ── CONTACT (4 cols) ───────────────────────────── -->
+    <!-- ── CONTACT (span 4, row 2) ────────────────────── -->
     <div class="card c-contact">
       <span class="label">Contact</span>
       <h3 class="contact-heading">Let's Connect</h3>
@@ -65,11 +65,11 @@
       <a class="cta-btn" href="mailto:dmrajparia@gmail.com">Email me →</a>
     </div>
 
-    <!-- ── PROJECT 1: AFCIL (4 cols) ─────────────────── -->
-    <a class="card c-proj1" href="projects/afcil.html">
+    <!-- ── PROJECT 1 (span 4, row 3) ─────────────────── -->
+    <a class="card c-proj" href="projects/afcil.html">
       <span class="label">Project</span>
       <div class="proj-title">AFCIL — Dynamic Expert Saturation</div>
-      <p class="proj-desc">Assumption-free class-incremental learning with no stored data. Up to +6.38% accuracy on CIFAR-100-LT and ImageNet-LT over strong baselines.</p>
+      <p class="proj-desc">Assumption-free class-incremental learning with no stored data. Up to +6.38% on CIFAR-100-LT and ImageNet-LT.</p>
       <div class="tags">
         <span class="tag">PyTorch</span>
         <span class="tag">CLIP</span>
@@ -77,43 +77,19 @@
       </div>
     </a>
 
-    <!-- ── PROJECT 2: ExtBrew (4 cols) ───────────────── -->
-    <a class="card c-proj2" href="projects/extbrew.html">
+    <!-- ── PROJECT 2 (span 4, row 3) ─────────────────── -->
+    <a class="card c-proj" href="projects/tumor-segmentation.html">
       <span class="label">Project</span>
-      <div class="proj-title">ExtBrew — AI Chrome Extension Scaffolder</div>
-      <p class="proj-desc">Web app that builds Manifest V3 Chrome extensions from natural-language prompts using Claude Sonnet 4.6 with streaming tool-use.</p>
-      <div class="tags">
-        <span class="tag">Next.js</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Claude API</span>
-      </div>
-    </a>
-
-    <!-- ── PROJECT 3: ViT (4 cols) ───────────────────── -->
-    <a class="card c-proj3" href="projects/vit-explainability.html">
-      <span class="label">Project</span>
-      <div class="proj-title">Down the Rabbit Hole of ViTs</div>
-      <p class="proj-desc">Wavelet-based framework showing Vision Transformers exhibit compositional behavior in deeper layers — robust to noise and JPEG compression. NeurIPS 2025.</p>
+      <div class="proj-title">Tumor Segmentation via Domain Adaptation</div>
+      <p class="proj-desc">CycleGAN-based domain adaptation for breast ultrasound. +11.21% DSC, +15.81% IoU. Submitted to MICCAI 2026.</p>
       <div class="tags">
         <span class="tag">PyTorch</span>
-        <span class="tag">ViT</span>
-        <span class="tag">Wavelets</span>
+        <span class="tag">CycleGAN</span>
+        <span class="tag">Medical Imaging</span>
       </div>
     </a>
 
-    <!-- ── PROJECT 4: LangGraph (4 cols) ─────────────── -->
-    <a class="card c-proj4" href="projects/langgraph-agent.html">
-      <span class="label">Project</span>
-      <div class="proj-title">Multi-Source Web Research Agent</div>
-      <p class="proj-desc">LangGraph agent running parallel searches across Google, Bing, and Reddit with zero-shot URL ranking and GPT-4o synthesis pipeline.</p>
-      <div class="tags">
-        <span class="tag">LangGraph</span>
-        <span class="tag">Python</span>
-        <span class="tag">GPT-4o</span>
-      </div>
-    </a>
-
-    <!-- ── TERMINAL (4 cols, row-span-2) ─────────────── -->
+    <!-- ── TERMINAL (span 4, row-span 2) ─────────────── -->
     <div class="card c-terminal" id="terminal-card">
       <div class="terminal-bar">
         <span class="dot dot-r"></span>
@@ -125,33 +101,57 @@
         <div class="terminal-output" id="terminal-output">
           <div class="t-line t-header">ML Research Terminal v1.0</div>
           <div class="t-line t-dim">——————————————————</div>
-          <div class="t-line" style="color:#3a3a3a;">Type <span style="color:#4a8a56">'help'</span> to get started.</div>
+          <div class="t-line" style="color:#3a3a3a">Type <span style="color:#4a8a56">'help'</span> to get started.</div>
           <div class="t-line">&nbsp;</div>
         </div>
         <div class="terminal-input-line">
           <span class="t-prompt-char">$</span>
           <input class="terminal-input" id="terminal-input" type="text"
-                 autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                 placeholder="" aria-label="Terminal input" />
+                 autocomplete="off" autocorrect="off" autocapitalize="off"
+                 spellcheck="false" aria-label="Terminal input" />
         </div>
       </div>
     </div>
 
-    <!-- ── AWARDS (4 cols) ────────────────────────────── -->
+    <!-- ── PROJECT 3 (span 4, row 4) ─────────────────── -->
+    <a class="card c-proj" href="projects/vit-explainability.html">
+      <span class="label">Project</span>
+      <div class="proj-title">Down the Rabbit Hole of ViTs</div>
+      <p class="proj-desc">Wavelet-based compositionality framework for Vision Transformers. Robust to noise and JPEG compression. NeurIPS 2025 submission.</p>
+      <div class="tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">ViT</span>
+        <span class="tag">Wavelets</span>
+      </div>
+    </a>
+
+    <!-- ── PROJECT 4 (span 4, row 4) ─────────────────── -->
+    <a class="card c-proj" href="projects/extbrew.html">
+      <span class="label">Project</span>
+      <div class="proj-title">ExtBrew — AI Chrome Extension Scaffolder</div>
+      <p class="proj-desc">Scaffolds Manifest V3 Chrome extensions from natural-language prompts via Claude Sonnet 4.6 with streaming tool-use.</p>
+      <div class="tags">
+        <span class="tag">Next.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Claude API</span>
+      </div>
+    </a>
+
+    <!-- ── AWARDS (span 4, row 5) ─────────────────────── -->
     <div class="card c-awards">
       <span class="label">Honors</span>
       <div class="awards-list">
         <div class="award-item">
           <div class="award-name">Academic Excellence Award</div>
-          <div class="award-desc">Highest CGPA in the academic year 2024–25 at IIT Hyderabad</div>
+          <div class="award-desc">Highest CGPA, IIT Hyderabad 2024–25</div>
         </div>
         <div class="award-item">
           <div class="award-name">IUSSTF–Viterbi Scholar 2025</div>
-          <div class="award-desc">Selected as one of top 15 research students nationally</div>
+          <div class="award-desc">Top 15 research students nationally</div>
         </div>
         <div class="award-item">
           <div class="award-name">Homi Bhabha Silver Medalist</div>
-          <div class="award-desc">Top 0.45% of participants nationwide</div>
+          <div class="award-desc">Top 0.45% of participants</div>
         </div>
         <div class="award-item">
           <div class="award-name">JEE Mains 99.90 Percentile</div>
@@ -160,11 +160,11 @@
       </div>
     </div>
 
-    <!-- ── SKILLS (4 cols) ────────────────────────────── -->
+    <!-- ── SKILLS (span 8, row 5) ─────────────────────── -->
     <div class="card c-skills">
       <span class="label">Skills</span>
       <div class="skills-heading">Tech Stack</div>
-      <div class="skills-sub">Python · PyTorch · LLMs · Computer Vision</div>
+      <div class="skills-sub">Python · PyTorch · LLMs · Computer Vision · Agentic AI</div>
       <div class="skill-pills">
         <span class="skill-pill">Python</span>
         <span class="skill-pill">PyTorch</span>
@@ -175,15 +175,16 @@
         <span class="skill-pill">LangGraph</span>
         <span class="skill-pill">LLMs</span>
         <span class="skill-pill">Agentic AI</span>
+        <span class="skill-pill">Transformers</span>
         <span class="skill-pill">Computer Vision</span>
         <span class="skill-pill">Medical Imaging</span>
         <span class="skill-pill">Continual Learning</span>
-        <span class="skill-pill">Transformers</span>
+        <span class="skill-pill">NumPy · Pandas</span>
         <span class="skill-pill">Git · Linux</span>
       </div>
     </div>
 
-    <!-- ── EXPERIENCE (7 cols) ────────────────────────── -->
+    <!-- ── EXPERIENCE (span 7, row 6) ─────────────────── -->
     <div class="card c-exp">
       <span class="label">Work Experience</span>
       <div class="exp-list">
@@ -194,7 +195,6 @@
             <span class="exp-date">May 2025 – present</span>
           </div>
           <div class="exp-org">USC Viterbi — Lab for Machine Learning, Health, and Biomedicine</div>
-          <p class="exp-desc">Automated tumor segmentation for breast ultrasound (BUSI, BUS-UCLM). CycleGAN-based domain adaptation improved DSC by +11.21% and IoU by +15.81%.</p>
           <span class="exp-badge">Submitted to MICCAI 2026</span>
         </div>
 
@@ -204,7 +204,6 @@
             <span class="exp-date">Jan – May 2025</span>
           </div>
           <div class="exp-org">IIT Hyderabad — ML and Vision Lab (Dr. Vineeth N. Balasubramanian)</div>
-          <p class="exp-desc">Developed AFCIL framework and DES training strategy. Benchmarked against DualPrompt, CODA, MoE-Adapter.</p>
         </div>
 
         <div class="exp-item">
@@ -213,7 +212,6 @@
             <span class="exp-date">Jun 2024 – May 2025</span>
           </div>
           <div class="exp-org">IIT Hyderabad — LFOVIA (Dr. Sumohana S. Channappayya)</div>
-          <p class="exp-desc">Designed wavelet-based compositionality framework for ViTs. Paper submitted to NeurIPS 2025.</p>
         </div>
 
         <div class="exp-item">
@@ -222,7 +220,6 @@
             <span class="exp-date">Jun – Dec 2024</span>
           </div>
           <div class="exp-org">DRDO</div>
-          <p class="exp-desc">Developed autonomous robot with advanced audio and vision capabilities for defense applications.</p>
         </div>
 
         <div class="exp-item">
@@ -239,38 +236,33 @@
             <span class="exp-date">May 2022 – Jul 2024</span>
           </div>
           <div class="exp-org">Rewardz — Singapore</div>
-          <p class="exp-desc">Built analytics dashboard for large-scale app usage and user behavior data.</p>
         </div>
 
       </div>
     </div>
 
-    <!-- ── EDUCATION (5 cols) ─────────────────────────── -->
+    <!-- ── EDUCATION (span 5, row 6) ─────────────────── -->
     <div class="card c-edu">
       <span class="label">Education</span>
       <div class="edu-degree">BTech — Computer Science &amp; Engineering</div>
       <div class="edu-school">Indian Institute of Technology Hyderabad</div>
       <div class="edu-meta">2022 – 2026 &nbsp;·&nbsp; GPA 9.44 / 10</div>
-      <div class="edu-secondary">
-        <div>XII · Pace Junior Science College &nbsp;·&nbsp; <span class="edu-secondary-item">91.50%</span></div>
-        <div style="margin-top:5px">X · Lokhandwala Foundation School &nbsp;·&nbsp; <span class="edu-secondary-item">98.17%</span></div>
-      </div>
     </div>
 
-    <!-- ── EXTRACURRICULARS (12 cols) ─────────────────── -->
+    <!-- ── EXTRACURRICULARS (span 12, row 7) ──────────── -->
     <div class="card c-extras">
       <span class="label">Beyond Academia</span>
       <div class="extras-grid">
         <div class="extra-item">
           <div class="extra-role">Head, Vibes Music Club</div>
           <div class="extra-org">IIT Hyderabad &nbsp;·&nbsp; May 2023 – May 2024</div>
-          <p class="extra-desc">Managed finances, events, media, and inductions. Organized concerts, jam sessions, and workshops creating an inclusive cultural space on campus.</p>
+          <p class="extra-desc">Managed finances, events, media, and inductions. Organized concerts, jam sessions, and workshops.</p>
           <a class="extra-link" href="https://www.youtube.com/@divyarajparia3296" target="_blank" rel="noopener">YouTube →</a>
         </div>
         <div class="extra-item">
           <div class="extra-role">Ideation Manager, E-Cell</div>
           <div class="extra-org">IIT Hyderabad &nbsp;·&nbsp; May 2023 – May 2024</div>
-          <p class="extra-desc">Secured speakers, led ideation sessions, organized startup pitch competitions and entrepreneurship events across campus.</p>
+          <p class="extra-desc">Secured speakers, led ideation sessions, organized startup pitch competitions.</p>
         </div>
       </div>
     </div>
@@ -286,118 +278,107 @@ const themeBtn = document.getElementById('theme-toggle');
 
 function applyTheme(light) {
   document.body.classList.toggle('light', light);
-  themeBtn.textContent = light ? '☾' : '☀';
-  // keep YouTube SVG polygon visible in light mode
-  document.querySelectorAll('.hero-link polygon').forEach(p => {
+  themeBtn.textContent = light ? '☾ Dark' : '☀ Light';
+  document.querySelectorAll('.yt-poly').forEach(p => {
     p.setAttribute('fill', light ? '#ffffff' : '#141414');
   });
 }
 
 themeBtn.addEventListener('click', () => {
-  const isLight = !document.body.classList.contains('light');
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  applyTheme(isLight);
+  const goLight = !document.body.classList.contains('light');
+  localStorage.setItem('theme', goLight ? 'light' : 'dark');
+  applyTheme(goLight);
 });
 
 if (localStorage.getItem('theme') === 'light') applyTheme(true);
 
 /* ── INTERACTIVE TERMINAL ─────────────────────────────── */
-const terminalInput  = document.getElementById('terminal-input');
-const terminalOutput = document.getElementById('terminal-output');
-const terminalScroll = document.getElementById('terminal-scroll');
-const terminalCard   = document.getElementById('terminal-card');
+const termInput  = document.getElementById('terminal-input');
+const termOut    = document.getElementById('terminal-output');
+const termScroll = document.getElementById('terminal-scroll');
 
 const COMMANDS = {
-  help: () => [
-    { text: 'Available commands:', cls: '' },
-    { text: '  whoami   — about me', cls: '' },
-    { text: '  projects — list projects', cls: '' },
-    { text: '  skills   — tech stack', cls: '' },
-    { text: '  contact  — get in touch', cls: '' },
-    { text: '  awards   — honors & achievements', cls: '' },
-    { text: '  clear    — clear terminal', cls: '' },
+  help: [
+    ['Available commands:', ''],
+    ['  whoami   — about me', ''],
+    ['  projects — list projects', ''],
+    ['  skills   — tech stack', ''],
+    ['  contact  — links', ''],
+    ['  awards   — honors', ''],
+    ['  clear    — clear terminal', ''],
   ],
-  whoami: () => [
-    { text: 'Divya Rajparia', cls: 't-prompt' },
-    { text: 'AI/ML Researcher · Builder', cls: '' },
-    { text: 'IIT Hyderabad → USC Viterbi · GPA 9.44', cls: '' },
-    { text: 'U.S. Citizen · dmrajparia@gmail.com', cls: '' },
+  whoami: [
+    ['Divya Rajparia', 't-prompt'],
+    ['AI/ML Researcher · Builder', ''],
+    ['IIT Hyderabad → USC Viterbi · GPA 9.44/10', ''],
+    ['U.S. Citizen · dmrajparia@gmail.com', ''],
   ],
-  projects: () => [
-    { text: 'Recent projects:', cls: '' },
-    { text: '  AFCIL       — continual learning without forgetting', cls: 't-out' },
-    { text: '  ExtBrew     — AI Chrome extension scaffolder', cls: 't-out' },
-    { text: '  ViT paper   — compositionality via wavelets (NeurIPS)', cls: 't-out' },
-    { text: '  LangGraph   — multi-source web research agent', cls: 't-out' },
+  projects: [
+    ['Current projects:', ''],
+    ['  AFCIL         — continual learning, no forgetting', 't-out'],
+    ['  Tumor Seg     — CycleGAN domain adaptation, MICCAI 2026', 't-out'],
+    ['  ViT paper     — compositionality via wavelets, NeurIPS', 't-out'],
+    ['  ExtBrew       — AI Chrome extension scaffolder', 't-out'],
+    ['  LangGraph     — multi-source web research agent', 't-out'],
   ],
-  skills: () => [
-    { text: 'Tech stack:', cls: '' },
-    { text: '  Python, PyTorch, TensorFlow, C++, SQL, TypeScript', cls: 't-out' },
-    { text: '  LangGraph, LLMs, Agentic AI, Transformers', cls: 't-out' },
-    { text: '  Computer Vision, Medical Imaging, Continual Learning', cls: 't-out' },
+  skills: [
+    ['Tech stack:', ''],
+    ['  Python, PyTorch, TensorFlow, C++, SQL, TypeScript', 't-out'],
+    ['  LangGraph, LLMs, Agentic AI, Transformers', 't-out'],
+    ['  Computer Vision, Medical Imaging, Continual Learning', 't-out'],
   ],
-  contact: () => [
-    { text: 'Get in touch:', cls: '' },
-    { text: '  Email    →  dmrajparia@gmail.com', cls: 't-out' },
-    { text: '  GitHub   →  github.com/divyarajparia', cls: 't-out' },
-    { text: '  LinkedIn →  linkedin.com/in/divya-rajparia-237786205', cls: 't-out' },
+  contact: [
+    ['Get in touch:', ''],
+    ['  Email    →  dmrajparia@gmail.com', 't-out'],
+    ['  GitHub   →  github.com/divyarajparia', 't-out'],
+    ['  LinkedIn →  linkedin.com/in/divya-rajparia-237786205', 't-out'],
   ],
-  awards: () => [
-    { text: 'Honors & Achievements:', cls: '' },
-    { text: '  Academic Excellence Award 2024–25 (highest CGPA, IITH)', cls: 't-out' },
-    { text: '  IUSSTF–Viterbi Scholar 2025  (top 15 nationally)', cls: 't-out' },
-    { text: '  Homi Bhabha Silver Medalist   (top 0.45%)', cls: 't-out' },
-    { text: '  JEE Mains 99.90 percentile    (1M+ candidates)', cls: 't-out' },
+  awards: [
+    ['Honors & Achievements:', ''],
+    ['  Academic Excellence Award 2024–25 (highest CGPA)', 't-out'],
+    ['  IUSSTF–Viterbi Scholar 2025  (top 15 nationally)', 't-out'],
+    ['  Homi Bhabha Silver Medalist   (top 0.45%)', 't-out'],
+    ['  JEE Mains 99.90 percentile    (1M+ candidates)', 't-out'],
   ],
 };
 
-function addOutputLine(text, cls = '') {
-  const div = document.createElement('div');
-  div.className = 't-line' + (cls ? ' ' + cls : '');
-  div.textContent = text;
-  terminalOutput.appendChild(div);
+function addLine(text, cls) {
+  const d = document.createElement('div');
+  d.className = 't-line' + (cls ? ' ' + cls : '');
+  d.textContent = text;
+  termOut.appendChild(d);
 }
 
-function scrollBottom() {
-  terminalScroll.scrollTop = terminalScroll.scrollHeight;
-}
-
-terminalInput.addEventListener('keydown', (e) => {
+termInput.addEventListener('keydown', e => {
   if (e.key !== 'Enter') return;
-  const raw = terminalInput.value;
+  const raw = termInput.value;
   const cmd = raw.trim().toLowerCase();
-  terminalInput.value = '';
+  termInput.value = '';
 
-  // echo
   const echo = document.createElement('div');
   echo.className = 't-line';
   echo.style.color = '#4a4a4a';
   echo.textContent = '$ ' + raw;
-  terminalOutput.appendChild(echo);
+  termOut.appendChild(echo);
 
-  if (!cmd) { scrollBottom(); return; }
+  if (!cmd) { termScroll.scrollTop = termScroll.scrollHeight; return; }
 
-  if (cmd === 'clear') {
-    terminalOutput.innerHTML = '';
-    scrollBottom();
-    return;
-  }
+  if (cmd === 'clear') { termOut.innerHTML = ''; return; }
 
   if (COMMANDS[cmd]) {
-    COMMANDS[cmd]().forEach(({ text, cls }) => addOutputLine(text, cls));
+    COMMANDS[cmd].forEach(([text, cls]) => addLine(text, cls));
   } else {
-    addOutputLine("command not found: '" + cmd + "'  — try 'help'", 't-err');
+    addLine("command not found: '" + cmd + "' — try 'help'", 't-err');
   }
 
-  const spacer = document.createElement('div');
-  spacer.className = 't-line';
-  spacer.innerHTML = '&nbsp;';
-  terminalOutput.appendChild(spacer);
+  const sp = document.createElement('div');
+  sp.className = 't-line'; sp.innerHTML = '&nbsp;';
+  termOut.appendChild(sp);
 
-  scrollBottom();
+  termScroll.scrollTop = termScroll.scrollHeight;
 });
 
-terminalCard.addEventListener('click', () => terminalInput.focus());
+document.getElementById('terminal-card').addEventListener('click', () => termInput.focus());
 </script>
 
 </body>
