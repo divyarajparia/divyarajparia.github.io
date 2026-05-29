@@ -66,7 +66,7 @@ body {
 .container {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 18px 18px 56px;
+  padding: 54px 18px 56px;
 }
 
 /* ── BENTO GRID ─────────────────────────────────────── */
@@ -128,7 +128,7 @@ body {
 /* ── GRID PLACEMENT ─────────────────────────────────── */
 /* Row 1–2 */
 .c-hero    { grid-column: span 8; grid-row: span 2; }
-.c-avatar  { grid-column: span 4; padding: 20px; display: flex; align-items: center; justify-content: center; }
+.c-avatar  { grid-column: span 4; padding: 12px; display: flex; align-items: center; justify-content: center; }
 /* Row 2 right */
 .c-contact { grid-column: span 4; }
 /* Row 3–4 */
@@ -181,7 +181,7 @@ body {
 .c-avatar { cursor: default; }
 .c-avatar:hover { transform: none; }
 .avatar-img {
-  width: 60%; height: auto;
+  width: 72%; height: auto;
   border-radius: calc(var(--radius) - 4px); display: block;
 }
 
