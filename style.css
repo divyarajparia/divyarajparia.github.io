@@ -151,6 +151,7 @@ body {
   line-height: 1.1;
   margin-bottom: 6px;
 }
+.hero-sub  { font-size: 13px; color: var(--muted); margin-bottom: 8px; margin-top: 6px; }
 .hero-role { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
 .hero-loc  {
   font-family: 'JetBrains Mono', monospace;

@@ -21,12 +21,13 @@
     <div class="card c-hero">
       <span class="label">Home</span>
       <h1 class="hero-name">Divya Rajparia</h1>
-      <p class="hero-role">AI / ML Researcher &nbsp;·&nbsp; Builder</p>
+      <p class="hero-sub">Building AI-native tools at the intersection of research and product.</p>
+      <p class="hero-role">AI Engineer &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Builder</p>
       <p class="hero-loc">@ USC Viterbi &nbsp;·&nbsp; IIT Hyderabad &nbsp;·&nbsp; U.S. Citizen</p>
       <p class="hero-bio">
-        I train models, chase benchmarks, and find it impossible to stop reading papers at 2 AM.
-        CS grad from IIT Hyderabad (top ~0.5% nationally, GPA 9.44/10). Currently doing ML research
-        at USC and building AI-native tools with LLMs and agentic systems.
+        Researcher by training. Builder by impulse.<br>
+        CS grad from IIT Hyderabad (top 0.5%, GPA 9.44). Tumor segmentation research at USC.
+        Currently building ExtBrew — Cursor for Chrome extensions. U.S. citizen, Bay Area.
       </p>
       <div class="hero-links">
         <a class="hero-link" href="mailto:dmrajparia@gmail.com">
@@ -61,7 +62,7 @@
     <div class="card c-contact">
       <span class="label">Contact</span>
       <h3 class="contact-heading">Let's Connect</h3>
-      <p class="contact-sub">Open to research collaborations, grad school conversations, and AI/ML opportunities.</p>
+      <p class="contact-sub">Looking for AI engineering roles at fast-moving startups in SF. Always up for research collaborations and conversations about agentic AI, evals, and ML infra.</p>
       <a class="cta-btn" href="mailto:dmrajparia@gmail.com">Email me →</a>
     </div>
 
@@ -81,11 +82,13 @@
     <a class="card c-proj" href="projects/extbrew.html">
       <span class="label">Project</span>
       <div class="proj-title">ExtBrew: AI-Native Chrome Extension Scaffolder</div>
-      <p class="proj-desc">Scaffolds Manifest V3 Chrome extensions from natural-language prompts via Claude Sonnet 4.6 with streaming tool-use.</p>
+      <p class="proj-desc">Type "block Twitter on weekdays 9–5" → get a working Chrome extension. AI scaffolds the manifest, popup, content scripts, and background workers with live preview and one-click download.</p>
       <div class="tags">
         <span class="tag">Next.js</span>
         <span class="tag">TypeScript</span>
         <span class="tag">Claude API</span>
+        <span class="tag">Tool Use</span>
+        <span class="tag">Streaming</span>
       </div>
     </a>
 
@@ -95,17 +98,22 @@
         <span class="dot dot-r"></span>
         <span class="dot dot-y"></span>
         <span class="dot dot-g"></span>
-        <span class="terminal-title">ml-research</span>
+        <span class="terminal-title">ai-builder</span>
       </div>
       <div class="terminal-scroll" id="terminal-scroll">
         <div class="terminal-output" id="terminal-output">
-          <div class="t-line t-header">ML Research Terminal v1.0</div>
+          <div class="t-line t-header">AI Engineering Terminal v1.0</div>
           <div class="t-line t-dim">——————————————————</div>
-          <div class="t-line" style="color:#3a3a3a">Type <span style="color:#4a8a56">'help'</span> to get started.</div>
-          <div class="t-line">&nbsp;</div>
+          <div class="t-line t-dim">&nbsp;</div>
+          <div class="t-line" style="color:#4a8a56">&gt; whoami</div>
+          <div class="t-line t-out">divya — researcher who ships</div>
+          <div class="t-line t-dim">&nbsp;</div>
+          <div class="t-line" style="color:#4a8a56">&gt; ls projects/</div>
+          <div class="t-line t-out">extbrew/&nbsp;&nbsp;tumor-seg/&nbsp;&nbsp;des/&nbsp;&nbsp;vit-composition/</div>
+          <div class="t-line t-dim">&nbsp;</div>
         </div>
         <div class="terminal-input-line">
-          <span class="t-prompt-char">$</span>
+          <span class="t-prompt-char">&gt;</span>
           <input class="terminal-input" id="terminal-input" type="text"
                  autocomplete="off" autocorrect="off" autocapitalize="off"
                  spellcheck="false" aria-label="Terminal input" />
@@ -164,22 +172,24 @@
     <div class="card c-skills">
       <span class="label">Skills</span>
       <div class="skills-heading">Tech Stack</div>
-      <div class="skills-sub">Python · PyTorch · LLMs · Computer Vision · Agentic AI</div>
+      <div class="skills-sub">Python · TypeScript · Next.js · Claude API · LangGraph · Tool Use · Streaming</div>
       <div class="skill-pills">
         <span class="skill-pill">Python</span>
-        <span class="skill-pill">PyTorch</span>
-        <span class="skill-pill">TensorFlow</span>
-        <span class="skill-pill">C / C++</span>
-        <span class="skill-pill">SQL</span>
         <span class="skill-pill">TypeScript</span>
+        <span class="skill-pill">Next.js</span>
+        <span class="skill-pill">Claude API</span>
         <span class="skill-pill">LangGraph</span>
-        <span class="skill-pill">LLMs</span>
+        <span class="skill-pill">Tool Use</span>
+        <span class="skill-pill">Streaming (SSE)</span>
         <span class="skill-pill">Agentic AI</span>
-        <span class="skill-pill">Transformers</span>
+        <span class="skill-pill">LLMs</span>
+        <span class="skill-pill">PyTorch</span>
         <span class="skill-pill">Computer Vision</span>
-        <span class="skill-pill">Medical Imaging</span>
-        <span class="skill-pill">Continual Learning</span>
-        <span class="skill-pill">NumPy · Pandas</span>
+        <span class="skill-pill">Transformers</span>
+        <span class="skill-pill">RAG</span>
+        <span class="skill-pill">Evals</span>
+        <span class="skill-pill">MCP</span>
+        <span class="skill-pill">C / C++</span>
         <span class="skill-pill">Git · Linux</span>
       </div>
     </div>
@@ -262,7 +272,7 @@
         <div class="extra-item">
           <div class="extra-role">Ideation Manager, E-Cell</div>
           <div class="extra-org">IIT Hyderabad &nbsp;·&nbsp; May 2023 – May 2024</div>
-          <p class="extra-desc">Secured speakers, led ideation sessions, organized startup pitch competitions.</p>
+          <p class="extra-desc">Organized startup pitch competitions and idea-generation sessions for IIT-H's entrepreneurship cell. Secured speakers and ran events connecting students to the startup ecosystem.</p>
         </div>
       </div>
     </div>
@@ -317,18 +327,18 @@ const COMMANDS = {
     ['  clear    — clear terminal', ''],
   ],
   whoami: [
-    ['Divya Rajparia', 't-prompt'],
-    ['AI/ML Researcher · Builder', ''],
+    ['divya — researcher who ships', 't-out'],
+    ['AI Engineer · Researcher · Builder', ''],
     ['IIT Hyderabad → USC Viterbi · GPA 9.44/10', ''],
-    ['U.S. Citizen · dmrajparia@gmail.com', ''],
+    ['Bay Area · U.S. Citizen · dmrajparia@gmail.com', ''],
   ],
   projects: [
     ['Current projects:', ''],
-    ['  AFCIL         — continual learning, no forgetting', 't-out'],
-    ['  Tumor Seg     — CycleGAN domain adaptation, MICCAI 2026', 't-out'],
-    ['  ViT paper     — compositionality via wavelets, NeurIPS', 't-out'],
-    ['  ExtBrew       — AI Chrome extension scaffolder', 't-out'],
-    ['  LangGraph     — multi-source web research agent', 't-out'],
+    ['  extbrew/       — Cursor for Chrome extensions', 't-out'],
+    ['  tumor-seg/     — CycleGAN domain adaptation, MICCAI 2026', 't-out'],
+    ['  des/           — continual learning, no forgetting', 't-out'],
+    ['  vit-composition/ — compositionality via wavelets', 't-out'],
+    ['  langgraph/     — multi-source web research agent', 't-out'],
   ],
   skills: [
     ['Tech stack:', ''],
@@ -367,7 +377,7 @@ termInput.addEventListener('keydown', e => {
   const echo = document.createElement('div');
   echo.className = 't-line';
   echo.style.color = '#4a4a4a';
-  echo.textContent = '$ ' + raw;
+  echo.textContent = '> ' + raw;
   termOut.appendChild(echo);
 
   if (!cmd) { termScroll.scrollTop = termScroll.scrollHeight; return; }
