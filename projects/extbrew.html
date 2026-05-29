@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExtBrew — Divya Rajparia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+  <a class="back-link" href="../index.html">← Back</a>
+
+  <div class="proj-page-label">Project</div>
+  <h1 class="proj-page-title">ExtBrew — AI-Native Chrome Extension Scaffolder</h1>
+
+  <div class="proj-section-title">Overview</div>
+  <p class="proj-overview">
+    A web application that scaffolds complete Chrome Manifest V3 extensions from natural-language prompts
+    using Claude Sonnet 4.6. The user describes what they want their extension to do, and ExtBrew generates
+    a fully structured multi-file project — visible in a Monaco editor — through a real-time streaming
+    tool-use loop. Designed with a bring-your-own-key model for zero server-side API cost.
+  </p>
+
+  <div class="proj-section-title">Key Features</div>
+  <ul class="proj-features">
+    <li>Natural-language to Chrome extension scaffolding using Claude Sonnet 4.6 with streaming</li>
+    <li>Token streaming via Anthropic Server-Sent Events on a Next.js Edge route using <code>TransformStream</code></li>
+    <li>Tool-use loop where Claude invokes <code>create_file</code>, <code>edit_file</code>, and <code>delete_file</code> to incrementally build projects</li>
+    <li>Monaco editor integration showing the full multi-file project structure in real time</li>
+    <li>Bring-your-own-key flow with <code>localStorage</code> persistence and an SSR-safe hydration hook to prevent React mismatches</li>
+    <li>Generates Manifest V3-compliant extensions ready to load into Chrome</li>
+  </ul>
+
+  <div class="proj-section-title">Technologies</div>
+  <div class="proj-tech-tags">
+    <span class="proj-tech-tag">Next.js</span>
+    <span class="proj-tech-tag">TypeScript</span>
+    <span class="proj-tech-tag">Claude API (Sonnet 4.6)</span>
+    <span class="proj-tech-tag">Anthropic SDK</span>
+    <span class="proj-tech-tag">Monaco Editor</span>
+    <span class="proj-tech-tag">Edge Runtime</span>
+    <span class="proj-tech-tag">Chrome Manifest V3</span>
+    <span class="proj-tech-tag">SSE / TransformStream</span>
+  </div>
+
+  <div class="proj-links-row">
+    <a class="proj-link-btn primary" href="https://github.com/divyarajparia/ExtBrew" target="_blank" rel="noopener">GitHub →</a>
+  </div>
+
+</div>
+
+</body>
+</html>

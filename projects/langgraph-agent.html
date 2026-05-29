@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LangGraph Research Agent — Divya Rajparia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<div class="project-page">
+
+  <a class="back-link" href="../index.html">← Back</a>
+
+  <div class="proj-page-label">Project</div>
+  <h1 class="proj-page-title">Multi-Source Web Research Agent</h1>
+
+  <div class="proj-section-title">Overview</div>
+  <p class="proj-overview">
+    A stateful multi-source research agent built in LangGraph that runs parallel web searches across Google,
+    Bing, and Reddit simultaneously. Given a research query, it asynchronously scrapes results via BrightData SERP,
+    ranks URLs using a zero-shot LLM call, and synthesizes a structured report from the top sources using GPT-4o.
+    Designed with Pydantic-structured outputs throughout for type safety and reliable parsing.
+  </p>
+
+  <div class="proj-section-title">Key Features</div>
+  <ul class="proj-features">
+    <li>Parallel multi-source search across Google, Bing, and Reddit in a single LangGraph workflow</li>
+    <li>BrightData SERP integration for async scraping with rate-limit handling</li>
+    <li>Zero-shot LLM-based URL ranking to filter low-quality sources before synthesis</li>
+    <li>Pydantic-structured outputs at every node for reliable, type-safe data flow</li>
+    <li>Modular synthesis pipeline using GPT-4o to combine and reconcile results from multiple sources</li>
+    <li>Stateful graph design enabling easy inspection of intermediate results and replay</li>
+  </ul>
+
+  <div class="proj-section-title">Technologies</div>
+  <div class="proj-tech-tags">
+    <span class="proj-tech-tag">Python</span>
+    <span class="proj-tech-tag">LangGraph</span>
+    <span class="proj-tech-tag">GPT-4o</span>
+    <span class="proj-tech-tag">Pydantic</span>
+    <span class="proj-tech-tag">BrightData SERP</span>
+    <span class="proj-tech-tag">Async / asyncio</span>
+    <span class="proj-tech-tag">LLMs</span>
+  </div>
+
+  <div class="proj-links-row">
+    <a class="proj-link-btn primary" href="https://github.com/divyarajparia/LangGraph-research-agent" target="_blank" rel="noopener">GitHub →</a>
+  </div>
+
+</div>
+
+</body>
+</html>

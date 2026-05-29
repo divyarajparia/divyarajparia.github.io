@@ -16,35 +16,37 @@
   <a class="back-link" href="../index.html">← Back</a>
 
   <div class="proj-page-label">Project</div>
-  <h1 class="proj-page-title">Tumor Segmentation via Synthetic Data</h1>
+  <h1 class="proj-page-title">Tumor Segmentation via Domain Adaptation</h1>
 
   <div class="proj-section-title">Overview</div>
   <p class="proj-overview">
-    Ongoing research at USC's Laboratory for Machine Learning, Health, and Biomedicine, focused on automating tumor
-    segmentation for breast and lung cancer. Manual annotation of medical images is time-consuming and requires
-    significant clinical effort. Our goal is to build a segmentation model that generalizes across institutions and
-    imaging conditions by addressing the domain shift problem — where models trained on one dataset fail when applied
-    to another. We generate synthetic data to simulate diverse domain scenarios, helping the model learn more robust
-    representations without requiring exhaustive real-world annotation.
+    Research at USC's Laboratory for Machine Learning, Health, and Biomedicine focused on automated tumor
+    segmentation for breast ultrasound images (BUSI, BUS-UCLM datasets). Manual annotation is time-consuming
+    and clinician-intensive. We address the domain-shift problem — where models trained on one institution's
+    data fail on another — using a CycleGAN-based style transfer approach for semantic alignment across datasets.
+    The result is a modular PyTorch pipeline with +11.21% DSC and +15.81% IoU over the baseline.
+    Submitted to <strong>MICCAI 2026</strong>.
   </p>
 
   <div class="proj-section-title">Key Features</div>
   <ul class="proj-features">
-    <li>Synthetic data generation to simulate cross-domain imaging variability</li>
-    <li>Targets both breast and lung cancer tumor delineation</li>
-    <li>Reduces clinician annotation burden while maintaining segmentation accuracy</li>
-    <li>Designed for generalizability across real-world clinical workflows</li>
-    <li>Domain adaptation pipeline to handle scanner and protocol heterogeneity</li>
+    <li>CycleGAN-based style transfer for cross-domain semantic alignment between BUSI and BUS-UCLM</li>
+    <li>Automated breast ultrasound tumor segmentation, reducing reliance on manual annotation</li>
+    <li>Object-oriented modular PyTorch pipeline for training, checkpointing, evaluation, and metric logging</li>
+    <li>+11.21% improvement in Dice Similarity Coefficient (DSC)</li>
+    <li>+15.81% improvement in Intersection over Union (IoU)</li>
+    <li>Submitted to MICCAI 2026 Conference</li>
   </ul>
 
   <div class="proj-section-title">Technologies</div>
   <div class="proj-tech-tags">
     <span class="proj-tech-tag">Python</span>
     <span class="proj-tech-tag">PyTorch</span>
+    <span class="proj-tech-tag">CycleGAN</span>
     <span class="proj-tech-tag">Medical Imaging</span>
-    <span class="proj-tech-tag">Synthetic Data</span>
     <span class="proj-tech-tag">Image Segmentation</span>
     <span class="proj-tech-tag">Domain Adaptation</span>
+    <span class="proj-tech-tag">BUSI / BUS-UCLM</span>
     <span class="proj-tech-tag">Healthcare AI</span>
   </div>
 
