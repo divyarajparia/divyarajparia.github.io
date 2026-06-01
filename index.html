@@ -62,29 +62,32 @@
       <a class="cta-btn" href="mailto:dmrajparia@gmail.com">Email me →</a>
     </div>
 
-    <!-- ── PROJECT 1 — USC (span 4, row 3) ──────────── -->
-    <a class="card c-proj" href="projects/tumor-segmentation.html">
+    <!-- ── PROJECT 1 — ExtBrew (span 4, row 3) ──────── -->
+    <a class="card c-proj featured" href="projects/extbrew.html">
       <span class="label">Project</span>
-      <div class="proj-title">Tumor Segmentation via Domain Adaptation</div>
-      <p class="proj-desc">CycleGAN-based domain adaptation for breast ultrasound. +11.21% DSC, +15.81% IoU. Submitted to MICCAI 2026.</p>
-      <div class="tags">
-        <span class="tag">PyTorch</span>
-        <span class="tag">CycleGAN</span>
-        <span class="tag">Medical Imaging</span>
-      </div>
-    </a>
-
-    <!-- ── PROJECT 2 (span 4, row 3) ─────────────────── -->
-    <a class="card c-proj" href="projects/extbrew.html">
-      <span class="label">Project</span>
+      <span class="live-badge">Live</span>
       <div class="proj-title">ExtBrew: AI-Native Chrome Extension Scaffolder</div>
-      <p class="proj-desc">Type "block Twitter on weekdays 9–5" → get a working Chrome extension. AI scaffolds the manifest, popup, content scripts, and background workers with live preview and one-click download.</p>
+      <p class="proj-desc">Type "block Twitter on weekdays 9–5" → get a working Chrome extension. AI scaffolds the manifest, popup, content scripts, and background workers via Claude Sonnet 4.6 tool-use, with live preview and one-click download.</p>
+      <span class="demo-pill">Live Demo →</span>
       <div class="tags">
         <span class="tag">Next.js</span>
         <span class="tag">TypeScript</span>
         <span class="tag">Claude API</span>
         <span class="tag">Tool Use</span>
         <span class="tag">Streaming</span>
+      </div>
+    </a>
+
+    <!-- ── PROJECT 2 — Tumor Seg (span 4, row 3) ─────── -->
+    <a class="card c-proj" href="projects/tumor-segmentation.html">
+      <span class="label">Project</span>
+      <div class="proj-title">Tumor Segmentation via Domain Adaptation</div>
+      <p class="proj-desc">Cross-dataset tumor segmentation for breast ultrasound — reducing manual annotation burden for radiologists. CycleGAN-based domain adaptation across BUSI and BUS-UCLM datasets pushed Dice score +11.21% and IoU +15.81% over baselines. Submitted to MICCAI 2026.</p>
+      <div class="tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">CycleGAN</span>
+        <span class="tag">Medical Imaging</span>
+        <span class="tag">Domain Adaptation</span>
       </div>
     </a>
 
@@ -112,27 +115,29 @@
       </div>
     </div>
 
-    <!-- ── PROJECT 3 (span 4, row 4) ─────────────────── -->
+    <!-- ── PROJECT 3 — DES (span 4, row 4) ───────────── -->
     <a class="card c-proj" href="projects/afcil.html">
       <span class="label">Project</span>
       <div class="proj-title">DES: A Smarter Way to Grow ML Models Over Time</div>
-      <p class="proj-desc">Assumption-free class-incremental learning with no stored data. Up to +6.38% on CIFAR-100-LT and ImageNet-LT.</p>
+      <p class="proj-desc">Continual learning without the usual unrealistic assumptions — no replay buffers, no balanced data, no stored samples. A two-stage framework (Dynamic Expert Saturation) trains MLP adapters on a frozen CLIP backbone to handle catastrophic forgetting and long-tailed class imbalance. +6.38% over prior methods on CIFAR-100-LT and ImageNet-LT.</p>
       <div class="tags">
         <span class="tag">PyTorch</span>
         <span class="tag">CLIP</span>
         <span class="tag">Continual Learning</span>
+        <span class="tag">Long-tailed Learning</span>
       </div>
     </a>
 
-    <!-- ── PROJECT 4 (span 4, row 4) ─────────────────── -->
+    <!-- ── PROJECT 4 — ViT (span 4, row 4) ───────────── -->
     <a class="card c-proj" href="projects/vit-explainability.html">
       <span class="label">Project</span>
       <div class="proj-title">Exploring Compositionality in Vision Transformers</div>
-      <p class="proj-desc">Wavelet-based compositionality framework for Vision Transformers. Robust to noise and JPEG compression.</p>
+      <p class="proj-desc">Do Vision Transformers actually compose features the way CNNs do? Used wavelet decomposition to test linear separability of sub-band features in ViT representations — found compositional structure emerges in deeper layers and survives noise + JPEG compression. NeurIPS 2025 submission.</p>
       <div class="tags">
         <span class="tag">PyTorch</span>
         <span class="tag">ViT</span>
         <span class="tag">Wavelets</span>
+        <span class="tag">Explainability</span>
       </div>
     </a>
 
